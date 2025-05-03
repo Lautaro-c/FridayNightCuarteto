@@ -108,8 +108,6 @@ C:\Users\p865\Downloads\Clase 3\obj\Debug\MyGame.csproj.CoreCompileInputs.cache
 C:\Users\p865\Downloads\Clase 3\obj\Debug\MyGame.csproj.Up2Date
 C:\Users\p865\Downloads\Clase 3\obj\Debug\MyGame.exe
 C:\Users\p865\Downloads\Clase 3\obj\Debug\MyGame.pdb
-C:\Users\lauli\Downloads\FridayNightCuarteto\bin\Debug\assets\bullet.png
-C:\Users\lauli\Downloads\FridayNightCuarteto\bin\Debug\assets\enemy.png
 C:\Users\lauli\Downloads\FridayNightCuarteto\bin\Debug\assets\fondo.png
 C:\Users\lauli\Downloads\FridayNightCuarteto\bin\Debug\assets\player.png
 C:\Users\lauli\Downloads\FridayNightCuarteto\bin\Debug\MyGame.exe.config
@@ -120,3 +118,27 @@ C:\Users\lauli\Downloads\FridayNightCuarteto\obj\Debug\MyGame.csproj.CoreCompile
 C:\Users\lauli\Downloads\FridayNightCuarteto\obj\Debug\MyGame.csproj.Up2Date
 C:\Users\lauli\Downloads\FridayNightCuarteto\obj\Debug\MyGame.exe
 C:\Users\lauli\Downloads\FridayNightCuarteto\obj\Debug\MyGame.pdb
+C:\Users\lauli\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\assets\bullet.png
+C:\Users\lauli\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\assets\enemy.png
+C:\Users\lauli\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\assets\fondo.png
+C:\Users\lauli\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\assets\player.png
+C:\Users\lauli\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\MyGame.exe.config
+C:\Users\lauli\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\MyGame.exe
+C:\Users\lauli\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\MyGame.pdb
+C:\Users\lauli\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\obj\Debug\MyGame.csproj.AssemblyReference.cache
+C:\Users\lauli\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\obj\Debug\MyGame.csproj.CoreCompileInputs.cache
+C:\Users\lauli\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\obj\Debug\MyGame.csproj.Up2Date
+C:\Users\lauli\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\obj\Debug\MyGame.exe
+C:\Users\lauli\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\obj\Debug\MyGame.pdb
+C:\Users\lauli\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\assets\FlechaAb.jpg
+C:\Users\lauli\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\assets\FlechaAr.jpg
+C:\Users\lauli\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\assets\FlechaDer.jpg
+C:\Users\lauli\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\assets\FlechasIzq.jpg
+C:\Users\lauli\Downloads\FridayNightCuarteto\bin\Debug\assets\FlechaAb.jpg
+C:\Users\lauli\Downloads\FridayNightCuarteto\bin\Debug\assets\FlechaAr.jpg
+C:\Users\lauli\Downloads\FridayNightCuarteto\bin\Debug\assets\FlechaDer.jpg
+C:\Users\lauli\Downloads\FridayNightCuarteto\bin\Debug\assets\FlechasIzq.jpg
+C:\Users\lauli\Downloads\FridayNightCuarteto\bin\Debug\assets\FlechaAbA.jpg
+C:\Users\lauli\Downloads\FridayNightCuarteto\bin\Debug\assets\FlechaArA.jpg
+C:\Users\lauli\Downloads\FridayNightCuarteto\bin\Debug\assets\FlechaDerA.jpg
+C:\Users\lauli\Downloads\FridayNightCuarteto\bin\Debug\assets\FlechaIzqA.jpg

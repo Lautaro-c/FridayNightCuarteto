@@ -47,9 +47,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bullet.cs" />
-    <Compile Include="Enemy.cs" />
-    <Compile Include="EnemyMovement.cs" />
+    <Compile Include="ArrowMovement.cs" />
+    <Compile Include="Arrows.cs" />
     <Compile Include="Engine\Font.cs" />
     <Compile Include="Engine\Engine.cs" />
     <Compile Include="Engine\Image.cs" />
@@ -66,10 +65,28 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="assets\bullet.png">
+    <Content Include="assets\FlechaAb.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="assets\enemy.png">
+    <Content Include="assets\FlechaAbA.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\FlechaAr.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\FlechaArA.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\FlechaDer.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\FlechaDerA.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\FlechaIzqA.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\FlechasIzq.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="assets\fondo.png">

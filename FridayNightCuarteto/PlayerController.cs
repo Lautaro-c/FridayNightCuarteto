@@ -47,20 +47,7 @@ namespace MyGame
             {
                 transform.Translate(0, 1);
             }
-            if (Engine.GetKey(Engine.KEY_ESP))
-            {
-                Shoot();
 
-            }
-        }
-
-        private void Shoot()
-        {
-            if ((DateTime.Now - timeLastShoot).TotalSeconds > timeBetweenShoot)
-            {
-                Program.AddBullet(transform.Posicion.x, transform.Posicion.y);
-                timeLastShoot = DateTime.Now;
-            }
         }
 
     }
