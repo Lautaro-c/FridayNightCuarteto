@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,19 +18,27 @@ namespace MyGame
         static private Image downArrowSImage = Engine.LoadImage("assets/FlechaAbA.jpg");
         static private Image upArrowSImage = Engine.LoadImage("assets/FlechaArA.jpg");
         private Image arrowImage; 
+
         private Transform transform;
         private ArrowMovement arrowMovement;
+
         private const float leftArrowPos = 628;
         private const float downArrowPos = 728;
         private const float upArrowPos = 828;
         private const float rightArrowPos = 928;
         private bool canMove = false;
+        private bool isStatic = false;
 
-        public Arrows(float positionX, float positionY, bool canMove)
+        private static Stopwatch stopwatch = new Stopwatch();
+        private float spawnTime;
+
+        public Arrows(float positionX, float positionY, bool isStatic, float spawnTime)
         {
+            stopwatch.Start();
             transform = new Transform(positionX, positionY);
             arrowMovement = new ArrowMovement(transform);
-            this.canMove = canMove;
+            this.isStatic = isStatic;
+            this.spawnTime = spawnTime;
             ChoseArrow(); 
         }
 
@@ -38,7 +47,7 @@ namespace MyGame
             switch (transform.Posicion.x)
             {
                 case leftArrowPos:
-                    if(canMove)
+                    if(isStatic == false)
                     {
                         arrowImage = leftArrowImage;
                     }else
@@ -47,7 +56,7 @@ namespace MyGame
                     }
                     break;
                 case rightArrowPos:
-                    if (canMove)
+                    if (isStatic == false)
                     {
                         arrowImage = rightArrowImage;
                     }else
@@ -56,7 +65,7 @@ namespace MyGame
                     }
                     break;
                 case downArrowPos:
-                    if (canMove)
+                    if (isStatic == false)
                     {
                         arrowImage = downArrowImage;
                     }else
@@ -65,7 +74,7 @@ namespace MyGame
                     }
                     break;
                 case upArrowPos:
-                    if (canMove)
+                    if (isStatic == false)
                     {
                         arrowImage = upArrowImage;
                     }else
@@ -78,7 +87,11 @@ namespace MyGame
 
         public void Update()
         {
-            if(canMove)
+            if (stopwatch.Elapsed.TotalSeconds >= spawnTime)
+            {
+                canMove = true;
+            }
+            if(canMove && isStatic == false)
             {
                 arrowMovement.Update();
             }

@@ -1,51 +1,72 @@
 ﻿using System;
+using System.CodeDom;
+using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace MyGame
 {
     public class PlayerController
     {
-        
-        private float speed;
-        private float timeBetweenShoot = 1;
 
         private Transform transform;
+        private DateTime lastTimeLeftArrow = DateTime.Now;
+        private DateTime lastTimeRightArrow = DateTime.Now;
+        private DateTime lastTimeDownArrow = DateTime.Now;
+        private DateTime lastTimeUpArrow = DateTime.Now;
 
-        
-
-        public float Speed => speed;
-
-        private DateTime timeLastShoot;
-
+        Stopwatch stopwatch = new Stopwatch();
 
         public PlayerController(Transform transform)
         {
             this.transform = transform;
+
+            stopwatch.Start();
+
         }
 
         public void Update()
         {
+
             if (Engine.GetKey(Engine.KEY_A))
             {
-                transform.Translate(-1, 0);
+                if((DateTime.Now - lastTimeLeftArrow).TotalSeconds >= 0.25)
+                {
+                    
+                    Engine.Debug($"arrowList.Add(new Arrows(leftArrowPos, 768, false, {stopwatch.Elapsed.TotalSeconds:F2}f));");
+                    lastTimeLeftArrow = DateTime.Now;
+                }
             }
 
             if (Engine.GetKey(Engine.KEY_D))
             {
-                transform.Translate(1, 0);
+                if ((DateTime.Now - lastTimeRightArrow).TotalSeconds >= 0.25)
+                {
+                    Engine.Debug($"arrowList.Add(new Arrows(rightArrowPos, 768, false, {stopwatch.Elapsed.TotalSeconds:F2}f));");
+                    lastTimeRightArrow = DateTime.Now;
+                }
             }
 
             if (Engine.GetKey(Engine.KEY_W))
             {
-                transform.Translate(0, -1);
+                if ((DateTime.Now - lastTimeUpArrow).TotalSeconds >= 0.25)
+                {
+                    Engine.Debug($"arrowList.Add(new Arrows(upArrowPos, 768, false, {stopwatch.Elapsed.TotalSeconds:F2}f));");
+                    lastTimeUpArrow = DateTime.Now;
+                }
             }
 
             if (Engine.GetKey(Engine.KEY_S))
             {
-                transform.Translate(0, 1);
+                if ((DateTime.Now - lastTimeDownArrow).TotalSeconds >= 0.25)
+                {
+                    Engine.Debug($"arrowList.Add(new Arrows(downArrowPos, 768, false, {stopwatch.Elapsed.TotalSeconds:F2}f));");
+                    lastTimeDownArrow = DateTime.Now;
+                }
             }
 
         }
