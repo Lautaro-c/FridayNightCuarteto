@@ -20,6 +20,7 @@ namespace MyGame
         private Image arrowImage; 
 
         private Transform transform;
+        private Transform size; 
         private ArrowMovement arrowMovement;
 
         private const float leftArrowPos = 628;
@@ -34,6 +35,7 @@ namespace MyGame
 
         public bool IsStatic => isStatic;
         public Transform Transform => transform;
+        public Transform Size => size;
 
 
 
@@ -41,6 +43,7 @@ namespace MyGame
         {
             stopwatch.Start();
             transform = new Transform(positionX, positionY);
+            size = new Transform(76, 76);
             arrowMovement = new ArrowMovement(transform);
             this.isStatic = isStatic;
             this.spawnTime = spawnTime;

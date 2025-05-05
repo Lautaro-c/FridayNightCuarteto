@@ -18,7 +18,8 @@ namespace MyGame
         private int downArrowPos = 728;
         private int upArrowPos = 828;
         private int rightArrowPos = 928;
-        private int arrowsYPos = 20;
+        private float arrowsYPos = 20;
+        private float arrowsHeight = 76; 
         private int givenPoints = 10;
 
         private Points points;
@@ -26,11 +27,11 @@ namespace MyGame
         public Collition()
         {
             arrowList = Program.ArrowsList;
-            GetStaticArrows();
+            GetArrows();
             points = new Points();
         }
 
-        private void GetStaticArrows()
+        private void GetArrows()
         {
             for (int i = 0; i < arrowList.Count; i++)
             {
@@ -60,9 +61,12 @@ namespace MyGame
         {
             for (int i = 0; i < leftArrowList.Count; i++)
             {
-                if (leftArrowList[i].Transform.Posicion.y <= (30 + 76) && leftArrowList[i].Transform.Posicion.y >= -76)
+                float distanceY = Math.Abs(arrowsYPos + (arrowsHeight / 2) - leftArrowList[i].Transform.Posicion.y + (leftArrowList[i].Size.Posicion.y / 2));
+                float sumHalfHeights = arrowsHeight / 2 + leftArrowList[i].Size.Posicion.y / 2;
+                if (distanceY >= sumHalfHeights)
                 {
                     points.RythmPoints = givenPoints;
+                    break;
                 }
             }
         }
@@ -71,9 +75,12 @@ namespace MyGame
         {
             for (int i = 0; i < upArrowList.Count; i++)
             {
-                if (upArrowList[i].Transform.Posicion.y <= (30 + 76) && upArrowList[i].Transform.Posicion.y >= -76)
+                float distanceY = Math.Abs(arrowsYPos + (arrowsHeight / 2) - upArrowList[i].Transform.Posicion.y + (upArrowList[i].Size.Posicion.y / 2));
+                float sumHalfHeights = arrowsHeight / 2 + upArrowList[i].Size.Posicion.y / 2;
+                if (distanceY >= sumHalfHeights)
                 {
                     points.RythmPoints = givenPoints;
+                    break;
                 }
             }
         }
@@ -82,9 +89,12 @@ namespace MyGame
         {
             for (int i = 0; i < downArrowList.Count; i++)
             {
-                if (downArrowList[i].Transform.Posicion.y <= (30 + 76) && downArrowList[i].Transform.Posicion.y >= -76)
+                float distanceY = Math.Abs(arrowsYPos + (arrowsHeight / 2) - downArrowList[i].Transform.Posicion.y + (downArrowList[i].Size.Posicion.y / 2));
+                float sumHalfHeights = arrowsHeight / 2 + downArrowList[i].Size.Posicion.y / 2;
+                if (distanceY >= sumHalfHeights)
                 {
                     points.RythmPoints = givenPoints;
+                    break;
                 }
             }
         }
@@ -93,9 +103,12 @@ namespace MyGame
         {
             for (int i = 0; i < rightArrowList.Count; i++)
             {
-                if (rightArrowList[i].Transform.Posicion.y <= (30 + 76) && rightArrowList[i].Transform.Posicion.y >= -76)
+                float distanceY = Math.Abs(arrowsYPos + (arrowsHeight / 2) - rightArrowList[i].Transform.Posicion.y + (rightArrowList[i].Size.Posicion.y / 2));
+                float sumHalfHeights = arrowsHeight / 2 + rightArrowList[i].Size.Posicion.y / 2;
+                if (distanceY >= sumHalfHeights)
                 {
                     points.RythmPoints = givenPoints;
+                    break;
                 }
             }
         }

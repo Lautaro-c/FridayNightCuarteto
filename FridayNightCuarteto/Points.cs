@@ -31,5 +31,13 @@ namespace MyGame
         {
             
         }
+
+        //si los puntos son mayores a 3450 ganas, sino perdes
+        //Menu principal
+        //Movimiento del jugador
+        //Pantalla de victoria 
+        //Pantalla de derrota
+        //Un objeto con animaciones
+        //singleton
     }
 }
