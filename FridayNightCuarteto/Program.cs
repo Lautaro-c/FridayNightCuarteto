@@ -17,12 +17,16 @@ namespace MyGame
         static private List<Arrows> arrowList = new List<Arrows>();
         static private Image fondo = Engine.LoadImage("assets/fondo.png");
         static private Player player1;
+
+
         static private int nivel;
         static private int leftArrowPos = 628;
         static private int downArrowPos = 728;
         static private int upArrowPos = 828;
         static private int rightArrowPos = 928;
         static private int arrowsYPos = 20;
+
+        static public List<Arrows> ArrowsList => arrowList;
 
         static void Main(string[] args)
         {
@@ -39,7 +43,6 @@ namespace MyGame
 
         static public void InitializeLevel()
         {
-            player1 = new Player(0, 0);
             arrowList.Add(new Arrows(rightArrowPos, arrowsYPos, true, 0));
             arrowList.Add(new Arrows(upArrowPos, arrowsYPos, true, 0));
             arrowList.Add(new Arrows(downArrowPos, arrowsYPos, true, 0));
@@ -501,6 +504,7 @@ namespace MyGame
             arrowList.Add(new Arrows(downArrowPos, 768, false, 212.74f));
             arrowList.Add(new Arrows(leftArrowPos, 768, false, 213.30f));
 
+            player1 = new Player(0, 0);
         }
 
         static void Update()

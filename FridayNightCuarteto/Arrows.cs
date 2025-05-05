@@ -32,6 +32,11 @@ namespace MyGame
         private static Stopwatch stopwatch = new Stopwatch();
         private float spawnTime;
 
+        public bool IsStatic => isStatic;
+        public Transform Transform => transform;
+
+
+
         public Arrows(float positionX, float positionY, bool isStatic, float spawnTime)
         {
             stopwatch.Start();
@@ -39,7 +44,7 @@ namespace MyGame
             arrowMovement = new ArrowMovement(transform);
             this.isStatic = isStatic;
             this.spawnTime = spawnTime;
-            ChoseArrow(); 
+            ChoseArrow();
         }
 
         private void ChoseArrow()

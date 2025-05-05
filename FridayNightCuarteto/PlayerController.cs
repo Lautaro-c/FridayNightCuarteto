@@ -20,13 +20,13 @@ namespace MyGame
         private DateTime lastTimeUpArrow = DateTime.Now;
 
         Stopwatch stopwatch = new Stopwatch();
+        private Collition collition;
 
         public PlayerController(Transform transform)
         {
             this.transform = transform;
-
             stopwatch.Start();
-
+            collition = new Collition();
         }
 
         public void Update()
@@ -36,8 +36,8 @@ namespace MyGame
             {
                 if((DateTime.Now - lastTimeLeftArrow).TotalSeconds >= 0.25)
                 {
-                    
-                    Engine.Debug($"arrowList.Add(new Arrows(leftArrowPos, 768, false, {stopwatch.Elapsed.TotalSeconds:F2}f));");
+                    //Engine.Debug($"arrowList.Add(new Arrows(leftArrowPos, 768, false, {stopwatch.Elapsed.TotalSeconds:F2}f));");
+                    collition.GetLeftCollition();
                     lastTimeLeftArrow = DateTime.Now;
                 }
             }
@@ -46,7 +46,8 @@ namespace MyGame
             {
                 if ((DateTime.Now - lastTimeRightArrow).TotalSeconds >= 0.25)
                 {
-                    Engine.Debug($"arrowList.Add(new Arrows(rightArrowPos, 768, false, {stopwatch.Elapsed.TotalSeconds:F2}f));");
+                    //Engine.Debug($"arrowList.Add(new Arrows(rightArrowPos, 768, false, {stopwatch.Elapsed.TotalSeconds:F2}f));");
+                    collition.GetRightCollition();
                     lastTimeRightArrow = DateTime.Now;
                 }
             }
@@ -55,7 +56,8 @@ namespace MyGame
             {
                 if ((DateTime.Now - lastTimeUpArrow).TotalSeconds >= 0.25)
                 {
-                    Engine.Debug($"arrowList.Add(new Arrows(upArrowPos, 768, false, {stopwatch.Elapsed.TotalSeconds:F2}f));");
+                    //Engine.Debug($"arrowList.Add(new Arrows(upArrowPos, 768, false, {stopwatch.Elapsed.TotalSeconds:F2}f));");
+                    collition.GetUpCollition();
                     lastTimeUpArrow = DateTime.Now;
                 }
             }
@@ -64,7 +66,8 @@ namespace MyGame
             {
                 if ((DateTime.Now - lastTimeDownArrow).TotalSeconds >= 0.25)
                 {
-                    Engine.Debug($"arrowList.Add(new Arrows(downArrowPos, 768, false, {stopwatch.Elapsed.TotalSeconds:F2}f));");
+                    //Engine.Debug($"arrowList.Add(new Arrows(downArrowPos, 768, false, {stopwatch.Elapsed.TotalSeconds:F2}f));");
+                    collition.GetDownCollition();
                     lastTimeDownArrow = DateTime.Now;
                 }
             }
