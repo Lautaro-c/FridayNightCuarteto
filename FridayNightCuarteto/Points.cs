@@ -9,7 +9,7 @@ namespace MyGame
 {
     public class Points
     {
-        private int rythmPoints = 0;
+        private int rythmPoints;
 
         public int RythmPoints
         { 
@@ -29,7 +29,7 @@ namespace MyGame
 
         public Points() 
         {
-            
+            rythmPoints = 0;
         }
 
         //si los puntos son mayores a 3450 ganas, sino perdes

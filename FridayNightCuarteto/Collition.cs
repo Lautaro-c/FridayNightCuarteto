@@ -22,13 +22,11 @@ namespace MyGame
         private float arrowsHeight = 76; 
         private int givenPoints = 10;
 
-        private Points points;
 
         public Collition()
         {
-            arrowList = Program.ArrowsList;
+            arrowList = GameManager.Instance.LevelController.ArrowList;
             GetArrows();
-            points = new Points();
         }
 
         private void GetArrows()
@@ -65,7 +63,7 @@ namespace MyGame
                 float sumHalfHeights = arrowsHeight / 2 + leftArrowList[i].Size.Posicion.y / 2;
                 if (distanceY >= sumHalfHeights)
                 {
-                    points.RythmPoints = givenPoints;
+                    GameManager.Instance.Points.RythmPoints = givenPoints;
                     break;
                 }
             }
@@ -79,7 +77,7 @@ namespace MyGame
                 float sumHalfHeights = arrowsHeight / 2 + upArrowList[i].Size.Posicion.y / 2;
                 if (distanceY >= sumHalfHeights)
                 {
-                    points.RythmPoints = givenPoints;
+                    GameManager.Instance.Points.RythmPoints = givenPoints;
                     break;
                 }
             }
@@ -93,7 +91,7 @@ namespace MyGame
                 float sumHalfHeights = arrowsHeight / 2 + downArrowList[i].Size.Posicion.y / 2;
                 if (distanceY >= sumHalfHeights)
                 {
-                    points.RythmPoints = givenPoints;
+                    GameManager.Instance.Points.RythmPoints = givenPoints;
                     break;
                 }
             }
@@ -107,7 +105,7 @@ namespace MyGame
                 float sumHalfHeights = arrowsHeight / 2 + rightArrowList[i].Size.Posicion.y / 2;
                 if (distanceY >= sumHalfHeights)
                 {
-                    points.RythmPoints = givenPoints;
+                    GameManager.Instance.Points.RythmPoints = givenPoints;
                     break;
                 }
             }

@@ -3,28 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\lauli\\Downloads\\FridayNightCuarteto\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2CDCD5DC-5145-4C37-ACEA-CE81D939F89E}|MyGame.csproj|c:\\users\\lauli\\downloads\\fridaynightcuarteto\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CDCD5DC-5145-4C37-ACEA-CE81D939F89E}|MyGame.csproj|solutionrelative:gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2CDCD5DC-5145-4C37-ACEA-CE81D939F89E}|MyGame.csproj|C:\\Users\\lauli\\Downloads\\FridayNightCuarteto\\points.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2CDCD5DC-5145-4C37-ACEA-CE81D939F89E}|MyGame.csproj|solutionrelative:points.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2CDCD5DC-5145-4C37-ACEA-CE81D939F89E}|MyGame.csproj|c:\\users\\lauli\\downloads\\fridaynightcuarteto\\collition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2CDCD5DC-5145-4C37-ACEA-CE81D939F89E}|MyGame.csproj|c:\\users\\lauli\\downloads\\fridaynightcuarteto\\time.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CDCD5DC-5145-4C37-ACEA-CE81D939F89E}|MyGame.csproj|solutionrelative:time.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CDCD5DC-5145-4C37-ACEA-CE81D939F89E}|MyGame.csproj|C:\\Users\\lauli\\Downloads\\FridayNightCuarteto\\collition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2CDCD5DC-5145-4C37-ACEA-CE81D939F89E}|MyGame.csproj|solutionrelative:collition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CDCD5DC-5145-4C37-ACEA-CE81D939F89E}|MyGame.csproj|c:\\users\\lauli\\downloads\\fridaynightcuarteto\\levelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CDCD5DC-5145-4C37-ACEA-CE81D939F89E}|MyGame.csproj|solutionrelative:levelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CDCD5DC-5145-4C37-ACEA-CE81D939F89E}|MyGame.csproj|c:\\users\\lauli\\downloads\\fridaynightcuarteto\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CDCD5DC-5145-4C37-ACEA-CE81D939F89E}|MyGame.csproj|solutionrelative:playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2CDCD5DC-5145-4C37-ACEA-CE81D939F89E}|MyGame.csproj|C:\\Users\\lauli\\Downloads\\FridayNightCuarteto\\arrows.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2CDCD5DC-5145-4C37-ACEA-CE81D939F89E}|MyGame.csproj|solutionrelative:arrows.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2CDCD5DC-5145-4C37-ACEA-CE81D939F89E}|MyGame.csproj|C:\\Users\\lauli\\Downloads\\FridayNightCuarteto\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CDCD5DC-5145-4C37-ACEA-CE81D939F89E}|MyGame.csproj|solutionrelative:playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2CDCD5DC-5145-4C37-ACEA-CE81D939F89E}|MyGame.csproj|C:\\Users\\lauli\\Downloads\\FridayNightCuarteto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CDCD5DC-5145-4C37-ACEA-CE81D939F89E}|MyGame.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2CDCD5DC-5145-4C37-ACEA-CE81D939F89E}|MyGame.csproj|C:\\Users\\lauli\\Downloads\\FridayNightCuarteto\\engine\\font.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2CDCD5DC-5145-4C37-ACEA-CE81D939F89E}|MyGame.csproj|solutionrelative:engine\\font.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2CDCD5DC-5145-4C37-ACEA-CE81D939F89E}|MyGame.csproj|C:\\Users\\lauli\\Downloads\\FridayNightCuarteto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CDCD5DC-5145-4C37-ACEA-CE81D939F89E}|MyGame.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2CDCD5DC-5145-4C37-ACEA-CE81D939F89E}|MyGame.csproj|C:\\Users\\lauli\\Downloads\\FridayNightCuarteto\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,73 +54,115 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Time.cs",
+              "DocumentMoniker": "C:\\Users\\lauli\\Downloads\\FridayNightCuarteto\\Time.cs",
+              "RelativeDocumentMoniker": "Time.cs",
+              "ToolTip": "C:\\Users\\lauli\\Downloads\\FridayNightCuarteto\\Time.cs",
+              "RelativeToolTip": "Time.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T23:13:25.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LevelController.cs",
+              "DocumentMoniker": "C:\\Users\\lauli\\Downloads\\FridayNightCuarteto\\LevelController.cs",
+              "RelativeDocumentMoniker": "LevelController.cs",
+              "ToolTip": "C:\\Users\\lauli\\Downloads\\FridayNightCuarteto\\LevelController.cs",
+              "RelativeToolTip": "LevelController.cs",
+              "ViewState": "AgIAAOkBAAAAAAAAAAAAwPQBAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T23:07:13.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\lauli\\Downloads\\FridayNightCuarteto\\GameManager.cs",
+              "RelativeDocumentMoniker": "GameManager.cs",
+              "ToolTip": "C:\\Users\\lauli\\Downloads\\FridayNightCuarteto\\GameManager.cs",
+              "RelativeToolTip": "GameManager.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAA5wCkAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T23:06:14.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Points.cs",
               "DocumentMoniker": "C:\\Users\\lauli\\Downloads\\FridayNightCuarteto\\Points.cs",
               "RelativeDocumentMoniker": "Points.cs",
               "ToolTip": "C:\\Users\\lauli\\Downloads\\FridayNightCuarteto\\Points.cs",
               "RelativeToolTip": "Points.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAuwCcAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAuwB8AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T12:52:12.688Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Collition.cs",
               "DocumentMoniker": "C:\\Users\\lauli\\Downloads\\FridayNightCuarteto\\Collition.cs",
               "RelativeDocumentMoniker": "Collition.cs",
               "ToolTip": "C:\\Users\\lauli\\Downloads\\FridayNightCuarteto\\Collition.cs",
               "RelativeToolTip": "Collition.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAkwGMAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAADUAAAAAAAAAAAAowEIAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T11:24:32.547Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\lauli\\Downloads\\FridayNightCuarteto\\PlayerController.cs",
               "RelativeDocumentMoniker": "PlayerController.cs",
               "ToolTip": "C:\\Users\\lauli\\Downloads\\FridayNightCuarteto\\PlayerController.cs",
               "RelativeToolTip": "PlayerController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACYAAAB3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T17:26:43.333Z"
+              "WhenOpened": "2025-04-03T17:26:43.333Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\lauli\\Downloads\\FridayNightCuarteto\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\lauli\\Downloads\\FridayNightCuarteto\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T16:53:56.438Z"
+              "WhenOpened": "2025-03-13T16:53:56.438Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Arrows.cs",
               "DocumentMoniker": "C:\\Users\\lauli\\Downloads\\FridayNightCuarteto\\Arrows.cs",
               "RelativeDocumentMoniker": "Arrows.cs",
               "ToolTip": "C:\\Users\\lauli\\Downloads\\FridayNightCuarteto\\Arrows.cs",
               "RelativeToolTip": "Arrows.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAQwC0AAAApAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwCsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T14:46:41.804Z"
+              "WhenOpened": "2025-05-03T14:46:41.804Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "ArrowMovement.cs",
               "DocumentMoniker": "C:\\Users\\lauli\\Downloads\\FridayNightCuarteto\\ArrowMovement.cs",
               "RelativeDocumentMoniker": "ArrowMovement.cs",
@@ -120,7 +174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\lauli\\Downloads\\FridayNightCuarteto\\Player.cs",
               "RelativeDocumentMoniker": "Player.cs",
@@ -132,7 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "Font.cs",
               "DocumentMoniker": "C:\\Users\\lauli\\Downloads\\FridayNightCuarteto\\Engine\\Font.cs",
               "RelativeDocumentMoniker": "Engine\\Font.cs",

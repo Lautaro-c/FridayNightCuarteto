@@ -53,19 +53,25 @@
     <Compile Include="Engine\Font.cs" />
     <Compile Include="Engine\Engine.cs" />
     <Compile Include="Engine\Image.cs" />
+    <Compile Include="GameManager.cs" />
+    <Compile Include="LevelController.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PlayerController.cs" />
     <Compile Include="Points.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Engine\Sound.cs" />
+    <Compile Include="Time.cs" />
     <Compile Include="Transform.cs" />
     <Compile Include="Vector2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="bin\Debug\MyGame.exe.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="assets\FlechaAb.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -94,9 +100,34 @@
     <Content Include="assets\fondo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="assets\Lose.png" />
+    <Content Include="assets\MainMenu.png" />
     <Content Include="assets\player.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="assets\Win.png" />
+    <Content Include="bin\Debug\assets\bullet.png" />
+    <Content Include="bin\Debug\assets\enemy.png" />
+    <Content Include="bin\Debug\assets\fondo.png" />
+    <Content Include="bin\Debug\assets\Lose.png" />
+    <Content Include="bin\Debug\assets\MainMenu.png" />
+    <Content Include="bin\Debug\assets\player.png" />
+    <Content Include="bin\Debug\assets\Ship\Idle\0.png" />
+    <Content Include="bin\Debug\assets\Ship\Idle\1.png" />
+    <Content Include="bin\Debug\assets\Ship\Idle\2.png" />
+    <Content Include="bin\Debug\assets\Ship\Idle\3.png" />
+    <Content Include="bin\Debug\assets\Win.png" />
+    <Content Include="bin\Debug\jpeg.dll" />
+    <Content Include="bin\Debug\libpng13.dll" />
+    <Content Include="bin\Debug\MyGame.exe" />
+    <Content Include="bin\Debug\MyGame.pdb" />
+    <Content Include="bin\Debug\SDL.dll" />
+    <Content Include="bin\Debug\SDL_gfx.dll" />
+    <Content Include="bin\Debug\SDL_image.dll" />
+    <Content Include="bin\Debug\SDL_mixer.dll" />
+    <Content Include="bin\Debug\SDL_ttf.dll" />
+    <Content Include="bin\Debug\Tao.Sdl.dll" />
+    <Content Include="bin\Debug\zlib1.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
