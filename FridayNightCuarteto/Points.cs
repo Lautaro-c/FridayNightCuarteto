@@ -33,6 +33,6 @@ namespace MyGame
         }
 
         //Movimiento del jugador
-        //Un objeto con animaciones
+     
     }
 }

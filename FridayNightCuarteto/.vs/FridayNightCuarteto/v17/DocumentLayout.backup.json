@@ -54,7 +54,8 @@
               "RelativeToolTip": "PlayerMovement.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T12:12:39.221Z"
+              "WhenOpened": "2025-05-07T12:12:39.221Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -79,7 +80,8 @@
               "RelativeToolTip": "PlayerController.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAAwCkAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T12:01:22.465Z"
+              "WhenOpened": "2025-05-07T12:01:22.465Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -91,7 +93,8 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T11:59:30.003Z"
+              "WhenOpened": "2025-05-07T11:59:30.003Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -103,7 +106,8 @@
               "RelativeToolTip": "Collition.cs",
               "ViewState": "AgIAADgAAAAAAAAAAAAAAGgAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T12:05:54.146Z"
+              "WhenOpened": "2025-05-07T12:05:54.146Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -115,7 +119,8 @@
               "RelativeToolTip": "Arrows.cs",
               "ViewState": "AgIAAGAAAAAAAAAAAAAAwG0AAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T12:05:11.591Z"
+              "WhenOpened": "2025-05-07T12:05:11.591Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -127,7 +132,8 @@
               "RelativeToolTip": "ArrowMovement.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T12:05:04.103Z"
+              "WhenOpened": "2025-05-07T12:05:04.103Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -139,7 +145,8 @@
               "RelativeToolTip": "Transform.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T12:02:23.796Z"
+              "WhenOpened": "2025-05-07T12:02:23.796Z",
+              "EditorCaption": ""
             }
           ]
         }

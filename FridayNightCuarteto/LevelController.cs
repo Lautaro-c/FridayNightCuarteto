@@ -23,6 +23,8 @@ namespace MyGame
 
         private static Stopwatch stopwatch = new Stopwatch();
 
+        public Player Player1 => player1;
+
 
 
         public void InitializeLevel()

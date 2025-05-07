@@ -20,7 +20,7 @@ namespace MyGame
         {
             transform.Translate(speed, 0);
 
-            if (transform.Posicion.x > 1024 - 100 || transform.Posicion.y < 0)
+            if (transform.Pos.x > 1024 - 100 || transform.Pos.y < 0)
             {
                 speed = speed * -1;
             }

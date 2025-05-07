@@ -52,7 +52,7 @@ namespace MyGame
 
         private void ChoseArrow()
         {
-            switch (transform.Posicion.x)
+            switch (transform.Pos.x)
             {
                 case leftArrowPos:
                     if(isStatic == false)
@@ -107,7 +107,7 @@ namespace MyGame
 
         public void Render()
         {
-            Engine.Draw(arrowImage, transform.Posicion.x, transform.Posicion.y);
+            Engine.Draw(arrowImage, transform.Pos.x, transform.Pos.y);
         }
     }
 }

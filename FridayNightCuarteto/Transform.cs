@@ -10,21 +10,26 @@ namespace MyGame
     public class Transform
     {
 
-        private Vector2 posicion;
-
-        public Vector2 Posicion => posicion;
-
+        private Vector2 pos;
+        public Vector2 Pos
+        {
+            get => pos;
+        }
 
         public Transform(float positionX, float positionY)
         {
-            posicion.x = positionX;
-            posicion.y = positionY;
+            pos.x = positionX;
+            pos.y = positionY;
         }
 
         public void Translate(float directionX, float directionY)
         {
-            posicion.x += directionX;
-            posicion.y += directionY;
+            pos.x += directionX;
+            pos.y += directionY;
         }
+
+
     }
+
+    
 }

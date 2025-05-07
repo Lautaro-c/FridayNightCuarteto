@@ -10,28 +10,48 @@ namespace MyGame
     public class Player
     {
         private Image playerImage = Engine.LoadImage("assets/player.png");
-
+        private Animation animation;
         private PlayerController playerControl;
+        private PlayerMovement playerMovement;
         private Transform transform;
         
+        public Transform Transform => transform;
+        public PlayerMovement PlayerMovement => playerMovement;
+       
         public Player(float positionX, float positionY)
         {
             transform = new Transform(positionX, positionY);
             playerControl = new PlayerController(transform);
+            playerMovement = new PlayerMovement(transform);
+            CreateAnimaton();
+           
+        }
+
+        public void CreateAnimaton()
+        {
+            List<Image> images = new List<Image>();
+
+            for (int i = 0; i < 11; i++)
+            {
+                Image image = Engine.LoadImage($"assets/Prota/{i}.gif");
+                images.Add(image);
+            }
+
+
+            animation = new Animation("Prota", true, 0.1f, images);
         }
 
         public void Update()
         {
             playerControl.Update();
+            animation.Update();
         }
 
 
         public void Render()
         {
-            Engine.Draw(playerImage, transform.Posicion.x, transform.Posicion.y);
+            Engine.Draw(animation.CurrentImage, transform.Pos.x +250 , transform.Pos.y + 250);
         }
     }
 }
 
-// PascalCase  => Clases, métodos
-// camelCase   => atributos

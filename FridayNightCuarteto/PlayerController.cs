@@ -18,10 +18,10 @@ namespace MyGame
         private DateTime lastTimeRightArrow = DateTime.Now;
         private DateTime lastTimeDownArrow = DateTime.Now;
         private DateTime lastTimeUpArrow = DateTime.Now;
-
+        private Player player;
         Stopwatch stopwatch = new Stopwatch();
         private Collition collition;
-
+        private int speed = 100;
         public PlayerController(Transform transform)
         {
             this.transform = transform;
@@ -39,6 +39,7 @@ namespace MyGame
                     //Engine.Debug($"arrowList.Add(new Arrows(leftArrowPos, 768, false, {stopwatch.Elapsed.TotalSeconds:F2}f));");
                     collition.GetLeftCollition();
                     lastTimeLeftArrow = DateTime.Now;
+                    GameManager.Instance.LevelController.Player1.PlayerMovement.MovePlayer(-speed, 0);
                 }
             }
 
@@ -49,6 +50,7 @@ namespace MyGame
                     //Engine.Debug($"arrowList.Add(new Arrows(rightArrowPos, 768, false, {stopwatch.Elapsed.TotalSeconds:F2}f));");
                     collition.GetRightCollition();
                     lastTimeRightArrow = DateTime.Now;
+                    GameManager.Instance.LevelController.Player1.PlayerMovement.MovePlayer(speed, 0);
                 }
             }
 
@@ -59,6 +61,7 @@ namespace MyGame
                     //Engine.Debug($"arrowList.Add(new Arrows(upArrowPos, 768, false, {stopwatch.Elapsed.TotalSeconds:F2}f));");
                     collition.GetUpCollition();
                     lastTimeUpArrow = DateTime.Now;
+                    GameManager.Instance.LevelController.Player1.PlayerMovement.MovePlayer(0, -speed);
                 }
             }
 
@@ -69,6 +72,7 @@ namespace MyGame
                     //Engine.Debug($"arrowList.Add(new Arrows(downArrowPos, 768, false, {stopwatch.Elapsed.TotalSeconds:F2}f));");
                     collition.GetDownCollition();
                     lastTimeDownArrow = DateTime.Now;
+                    GameManager.Instance.LevelController.Player1.PlayerMovement.MovePlayer(0, speed);
                 }
             }
 

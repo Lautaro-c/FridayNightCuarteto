@@ -12,15 +12,17 @@ namespace MyGame
 
     class Program
     {
+     
         static void Main(string[] args)
         {
             Engine.Initialize();
             GameManager.Instance.Initialize();
 
             Time.Initialize();
-
+       
             while (true)
             {
+             
                 Time.Update();
                 GameManager.Instance.Update();
                 GameManager.Instance.Render();
