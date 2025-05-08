@@ -21,7 +21,7 @@ namespace MyGame
         public Player(float positionX, float positionY)
         {
             transform = new Transform(positionX, positionY);
-            playerControl = new PlayerController(transform);
+            playerControl = new PlayerController();
             playerMovement = new PlayerMovement(transform);
             CreateAnimaton();
            

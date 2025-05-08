@@ -10,7 +10,7 @@ namespace MyGame
     public class LevelController
     {
         private List<Arrows> arrowList = new List<Arrows>();
-        private Image fondo = Engine.LoadImage("assets/Background.jpg");
+        private Image background = Engine.LoadImage("assets/Background.jpg");
         private Player player1;
 
         public List<Arrows> ArrowList => arrowList;
@@ -529,7 +529,7 @@ namespace MyGame
         public void Render()
         {
             Engine.Clear();
-            Engine.Draw(fondo, 0, 0);
+            Engine.Draw(background, 0, 0);
             player1.Render();
 
             for (int i = 0; i < arrowList.Count; i++)

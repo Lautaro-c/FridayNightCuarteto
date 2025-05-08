@@ -22,7 +22,6 @@ namespace MyGame
        
             while (true)
             {
-             
                 Time.Update();
                 GameManager.Instance.Update();
                 GameManager.Instance.Render();

@@ -14,6 +14,7 @@ namespace MyGame
         private List<Arrows> rightArrowList = new List<Arrows>();
         private List<Arrows> upArrowList = new List<Arrows>();
         private List<Arrows> downArrowList = new List<Arrows>();
+
         private int leftArrowPos = 628;
         private int downArrowPos = 728;
         private int upArrowPos = 828;

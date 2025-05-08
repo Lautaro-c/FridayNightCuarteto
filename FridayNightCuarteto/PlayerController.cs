@@ -13,19 +13,17 @@ namespace MyGame
     public class PlayerController
     {
 
-        private Transform transform;
         private DateTime lastTimeLeftArrow = DateTime.Now;
         private DateTime lastTimeRightArrow = DateTime.Now;
         private DateTime lastTimeDownArrow = DateTime.Now;
         private DateTime lastTimeUpArrow = DateTime.Now;
-        private Player player;
-        Stopwatch stopwatch = new Stopwatch();
+
+        //Stopwatch stopwatch = new Stopwatch();
         private Collition collition;
         private int speed = 100;
-        public PlayerController(Transform transform)
+        public PlayerController()
         {
-            this.transform = transform;
-            stopwatch.Start();
+            //stopwatch.Start();
             collition = new Collition();
         }
 
