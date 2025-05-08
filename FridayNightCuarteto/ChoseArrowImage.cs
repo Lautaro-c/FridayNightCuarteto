@@ -10,8 +10,6 @@ namespace MyGame
 {
     public class ChoseArrowImage 
     {
-        private Transform transform;
-        private bool isStatic;
         static private Image leftArrowImage = Engine.LoadImage("assets/LeftArrow.png");
         static private Image rightArrowImage = Engine.LoadImage("assets/RightArrow.png");
         static private Image downArrowImage = Engine.LoadImage("assets/DownArrow.png");
@@ -20,9 +18,9 @@ namespace MyGame
         static private Image rightArrowSImage = Engine.LoadImage("assets/RightArrowU.png");
         static private Image downArrowSImage = Engine.LoadImage("assets/DownArrowU.png");
         static private Image upArrowSImage = Engine.LoadImage("assets/UpArrowU.png");
+        private Transform transform;
+        private bool isStatic;
         private Image arrowImage;
-
-
         private const float leftArrowPos = 628;
         private const float downArrowPos = 728;
         private const float upArrowPos = 828;
@@ -33,6 +31,11 @@ namespace MyGame
             this.transform = transform;
             this.isStatic = isStatic;
             ChoseImage();
+        }
+
+        public Image GetImage()
+        {
+            return arrowImage;
         }
 
         private void ChoseImage()
@@ -82,11 +85,5 @@ namespace MyGame
             }
             
         }
-
-        public Image GetImage() 
-        { 
-            return arrowImage; 
-        }
-
     }
 }

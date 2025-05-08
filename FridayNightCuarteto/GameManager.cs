@@ -13,6 +13,7 @@ namespace MyGame
     }
     public class GameManager
     {
+        static private GameManager instance;
         private GameStage gameStage = GameStage.menu;
         private Image mainMenuScreen = Engine.LoadImage("assets/MainMenu.png");
         private Image winScreen = Engine.LoadImage("assets/Win.jpg");
@@ -21,8 +22,6 @@ namespace MyGame
         private Points points;
         public LevelController LevelController => levelController;
         public Points Points => points;
-
-        static private GameManager instance;
 
         static public GameManager Instance
         {

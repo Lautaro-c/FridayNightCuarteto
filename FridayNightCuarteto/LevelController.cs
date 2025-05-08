@@ -9,22 +9,18 @@ namespace MyGame
 {
     public class LevelController
     {
+        private static Stopwatch stopwatch = new Stopwatch();
         private List<Arrows> arrowList = new List<Arrows>();
         private Image background = Engine.LoadImage("assets/Background.jpg");
         private Player player1;
-
-        public List<Arrows> ArrowList => arrowList;
-
         private int leftArrowPos = 628;
         private int downArrowPos = 728;
         private int upArrowPos = 828;
         private int rightArrowPos = 928;
         private int arrowsYPos = 20;
 
-        private static Stopwatch stopwatch = new Stopwatch();
-
+        public List<Arrows> ArrowList => arrowList;
         public Stopwatch Stopwatch => stopwatch;
-
         public Player Player1 => player1;
 
 

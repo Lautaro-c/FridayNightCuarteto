@@ -12,11 +12,10 @@ namespace MyGame
         private bool isLooping;
         private float speed;
         private List<Image> image;
-
         private float actualTime;
         private int actualFrame;
-
         public Image CurrentImage => image[actualFrame];
+
         public Animation(string name, bool isLooping, float speed, List<Image> image)
         {
             this.name = name;
@@ -24,7 +23,6 @@ namespace MyGame
             this.speed = speed;
             this.image = image;
         }
-
 
         public void Update()
         {
@@ -49,7 +47,5 @@ namespace MyGame
 
             }
         }
-
-
     }
 }

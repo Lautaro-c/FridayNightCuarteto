@@ -9,7 +9,6 @@ namespace MyGame
 {
     public class Player
     {
-        
         private Animation animation;
         private PlayerController playerControl;
         private PlayerMovement playerMovement;

@@ -12,24 +12,19 @@ namespace MyGame
 {
     public class PlayerController
     {
-
         private DateTime lastTimeLeftArrow = DateTime.Now;
         private DateTime lastTimeRightArrow = DateTime.Now;
         private DateTime lastTimeDownArrow = DateTime.Now;
         private DateTime lastTimeUpArrow = DateTime.Now;
-
-        //Stopwatch stopwatch = new Stopwatch();
         private Collition collition;
         private int speed = 100;
         public PlayerController()
         {
-            //stopwatch.Start();
             collition = new Collition();
         }
 
         public void Update()
         {
-
             if (Engine.GetKey(Engine.KEY_A))
             {
                 if((DateTime.Now - lastTimeLeftArrow).TotalSeconds >= 0.25)

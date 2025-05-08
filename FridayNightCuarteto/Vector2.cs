@@ -10,13 +10,10 @@ namespace MyGame
     {
         public float x;
         public float y;
-
         public Vector2(float newX, float newY)
         {
             x = newX;
             y = newY;
         }
-
-
     }
 }

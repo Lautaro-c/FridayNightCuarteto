@@ -14,7 +14,6 @@ namespace MyGame
         private List<Arrows> rightArrowList = new List<Arrows>();
         private List<Arrows> upArrowList = new List<Arrows>();
         private List<Arrows> downArrowList = new List<Arrows>();
-
         private int leftArrowPos = 628;
         private int downArrowPos = 728;
         private int upArrowPos = 828;
@@ -23,37 +22,10 @@ namespace MyGame
         private float arrowsHeight = 76; 
         private int givenPoints = 10;
 
-
         public Collition()
         {
             arrowList = GameManager.Instance.LevelController.ArrowList;
             GetArrows();
-        }
-
-        private void GetArrows()
-        {
-            for (int i = 0; i < arrowList.Count; i++)
-            {
-                if (arrowList[i].Transform.Pos.y != arrowsYPos && arrowList[i].Transform.Pos.x == rightArrowPos)
-                {
-                    rightArrowList.Add(arrowList[i]);
-                }
-
-                if (arrowList[i].Transform.Pos.y != arrowsYPos && arrowList[i].Transform.Pos.x == leftArrowPos)
-                {
-                    leftArrowList.Add(arrowList[i]);
-                }
-
-                if (arrowList[i].Transform.Pos.y != arrowsYPos && arrowList[i].Transform.Pos.x == downArrowPos)
-                {
-                    downArrowList.Add(arrowList[i]);
-                }
-
-                if (arrowList[i].Transform.Pos.y != arrowsYPos && arrowList[i].Transform.Pos.x == upArrowPos)
-                {
-                    upArrowList.Add(arrowList[i]);
-                }
-            }
         }
 
         public void GetLeftCollition()
@@ -108,6 +80,32 @@ namespace MyGame
                 {
                     GameManager.Instance.Points.RythmPoints = givenPoints;
                     break;
+                }
+            }
+        }
+
+        private void GetArrows()
+        {
+            for (int i = 0; i < arrowList.Count; i++)
+            {
+                if (arrowList[i].Transform.Pos.y != arrowsYPos && arrowList[i].Transform.Pos.x == rightArrowPos)
+                {
+                    rightArrowList.Add(arrowList[i]);
+                }
+
+                if (arrowList[i].Transform.Pos.y != arrowsYPos && arrowList[i].Transform.Pos.x == leftArrowPos)
+                {
+                    leftArrowList.Add(arrowList[i]);
+                }
+
+                if (arrowList[i].Transform.Pos.y != arrowsYPos && arrowList[i].Transform.Pos.x == downArrowPos)
+                {
+                    downArrowList.Add(arrowList[i]);
+                }
+
+                if (arrowList[i].Transform.Pos.y != arrowsYPos && arrowList[i].Transform.Pos.x == upArrowPos)
+                {
+                    upArrowList.Add(arrowList[i]);
                 }
             }
         }

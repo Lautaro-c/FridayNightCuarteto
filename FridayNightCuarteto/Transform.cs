@@ -9,12 +9,8 @@ namespace MyGame
 {
     public class Transform
     {
-
         private Vector2 pos;
-        public Vector2 Pos
-        {
-            get => pos;
-        }
+        public Vector2 Pos => pos;
 
         public Transform(float positionX, float positionY)
         {
@@ -27,9 +23,5 @@ namespace MyGame
             pos.x += directionX;
             pos.y += directionY;
         }
-
-
-    }
-
-    
+    }  
 }

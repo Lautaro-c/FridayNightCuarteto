@@ -30,9 +30,6 @@ namespace MyGame
         public Points() 
         {
             rythmPoints = 0;
-        }
-
-        //Movimiento del jugador
-     
+        }     
     }
 }

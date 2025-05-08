@@ -11,7 +11,6 @@ namespace MyGame
         static private float deltaTime;
         static private DateTime initialTime;
         static private float lastTimeFrame;
-
         static public float DeltaTime => deltaTime;
 
         static public void Initialize()
