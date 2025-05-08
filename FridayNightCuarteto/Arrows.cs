@@ -9,14 +9,15 @@ namespace MyGame
 {
     public class Arrows
     {
-        static private Image leftArrowImage = Engine.LoadImage("assets/FlechasIzq.jpg");
-        static private Image rightArrowImage = Engine.LoadImage("assets/FlechaDer.jpg");
-        static private Image downArrowImage = Engine.LoadImage("assets/FlechaAb.jpg");
-        static private Image upArrowImage = Engine.LoadImage("assets/FlechaAr.jpg");
-        static private Image leftArrowSImage = Engine.LoadImage("assets/FlechaIzqA.jpg");
-        static private Image rightArrowSImage = Engine.LoadImage("assets/FlechaDerA.jpg");
-        static private Image downArrowSImage = Engine.LoadImage("assets/FlechaAbA.jpg");
-        static private Image upArrowSImage = Engine.LoadImage("assets/FlechaArA.jpg");
+        static private Image leftArrowImage = Engine.LoadImage("assets/LeftArrow.png");
+        static private Image rightArrowImage = Engine.LoadImage("assets/RightArrow.png");
+        static private Image downArrowImage = Engine.LoadImage("assets/DownArrow.png");
+        static private Image upArrowImage = Engine.LoadImage("assets/UpArrow.png");
+        static private Image leftArrowSImage = Engine.LoadImage("assets/LeftArrowU.png");
+        static private Image rightArrowSImage = Engine.LoadImage("assets/RightArrowU.png");
+        static private Image downArrowSImage = Engine.LoadImage("assets/DownArrowU.png");
+        static private Image upArrowSImage = Engine.LoadImage("assets/UpArrowU.png");
+
         private Image arrowImage; 
 
         private Transform transform;
@@ -27,30 +28,26 @@ namespace MyGame
         private const float downArrowPos = 728;
         private const float upArrowPos = 828;
         private const float rightArrowPos = 928;
+
         private bool canMove = false;
         private bool isStatic = false;
 
-        private static Stopwatch stopwatch = new Stopwatch();
         private float spawnTime;
 
-        public bool IsStatic => isStatic;
         public Transform Transform => transform;
         public Transform Size => size;
 
-
-
         public Arrows(float positionX, float positionY, bool isStatic, float spawnTime)
         {
-            stopwatch.Start();
             transform = new Transform(positionX, positionY);
             size = new Transform(76, 76);
             arrowMovement = new ArrowMovement(transform);
             this.isStatic = isStatic;
             this.spawnTime = spawnTime;
-            ChoseArrow();
+            ChoseArrowImage();
         }
 
-        private void ChoseArrow()
+        private void ChoseArrowImage()
         {
             switch (transform.Pos.x)
             {
@@ -95,19 +92,30 @@ namespace MyGame
 
         public void Update()
         {
-            if (stopwatch.Elapsed.TotalSeconds >= spawnTime)
+            if (GameManager.Instance.LevelController.Stopwatch.Elapsed.TotalSeconds >= spawnTime)
             {
                 canMove = true;
             }
+
             if(canMove && isStatic == false)
             {
                 arrowMovement.Update();
             }
+
+            DestroyArrow();
         }
 
         public void Render()
         {
             Engine.Draw(arrowImage, transform.Pos.x, transform.Pos.y);
+        }
+
+        private void DestroyArrow()
+        {
+            if(transform.Pos.y <= -152)
+            {
+                GameManager.Instance.LevelController.ArrowList.Remove(this);
+            }
         }
     }
 }

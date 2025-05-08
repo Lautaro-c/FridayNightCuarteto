@@ -9,7 +9,7 @@ namespace MyGame
 {
     public class Player
     {
-        private Image playerImage = Engine.LoadImage("assets/player.png");
+        
         private Animation animation;
         private PlayerController playerControl;
         private PlayerMovement playerMovement;

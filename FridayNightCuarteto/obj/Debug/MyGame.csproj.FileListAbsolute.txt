@@ -172,16 +172,6 @@ C:\Users\rodri\OneDrive\Desktop\FridayNightCuarteto-main\FridayNightCuarteto-mai
 C:\Users\rodri\OneDrive\Desktop\FridayNightCuarteto-main\FridayNightCuarteto-main\FridayNightCuarteto\bin\Debug\assets\Prota\7.gif
 C:\Users\rodri\OneDrive\Desktop\FridayNightCuarteto-main\FridayNightCuarteto-main\FridayNightCuarteto\bin\Debug\assets\Prota\8.gif
 C:\Users\rodri\OneDrive\Desktop\FridayNightCuarteto-main\FridayNightCuarteto-main\FridayNightCuarteto\bin\Debug\assets\Prota\9.gif
-C:\Users\lauli\Downloads\FridayNightCuarteto-main (2)\FridayNightCuarteto-main\FridayNightCuarteto-main\FridayNightCuarteto\bin\Debug\assets\FlechaAb.jpg
-C:\Users\lauli\Downloads\FridayNightCuarteto-main (2)\FridayNightCuarteto-main\FridayNightCuarteto-main\FridayNightCuarteto\bin\Debug\assets\FlechaAbA.jpg
-C:\Users\lauli\Downloads\FridayNightCuarteto-main (2)\FridayNightCuarteto-main\FridayNightCuarteto-main\FridayNightCuarteto\bin\Debug\assets\FlechaAr.jpg
-C:\Users\lauli\Downloads\FridayNightCuarteto-main (2)\FridayNightCuarteto-main\FridayNightCuarteto-main\FridayNightCuarteto\bin\Debug\assets\FlechaArA.jpg
-C:\Users\lauli\Downloads\FridayNightCuarteto-main (2)\FridayNightCuarteto-main\FridayNightCuarteto-main\FridayNightCuarteto\bin\Debug\assets\FlechaDer.jpg
-C:\Users\lauli\Downloads\FridayNightCuarteto-main (2)\FridayNightCuarteto-main\FridayNightCuarteto-main\FridayNightCuarteto\bin\Debug\assets\FlechaDerA.jpg
-C:\Users\lauli\Downloads\FridayNightCuarteto-main (2)\FridayNightCuarteto-main\FridayNightCuarteto-main\FridayNightCuarteto\bin\Debug\assets\FlechaIzqA.jpg
-C:\Users\lauli\Downloads\FridayNightCuarteto-main (2)\FridayNightCuarteto-main\FridayNightCuarteto-main\FridayNightCuarteto\bin\Debug\assets\FlechasIzq.jpg
-C:\Users\lauli\Downloads\FridayNightCuarteto-main (2)\FridayNightCuarteto-main\FridayNightCuarteto-main\FridayNightCuarteto\bin\Debug\assets\fondo.png
-C:\Users\lauli\Downloads\FridayNightCuarteto-main (2)\FridayNightCuarteto-main\FridayNightCuarteto-main\FridayNightCuarteto\bin\Debug\assets\player.png
 C:\Users\lauli\Downloads\FridayNightCuarteto-main (2)\FridayNightCuarteto-main\FridayNightCuarteto-main\FridayNightCuarteto\bin\Debug\assets\Prota\0.gif
 C:\Users\lauli\Downloads\FridayNightCuarteto-main (2)\FridayNightCuarteto-main\FridayNightCuarteto-main\FridayNightCuarteto\bin\Debug\assets\Prota\1.gif
 C:\Users\lauli\Downloads\FridayNightCuarteto-main (2)\FridayNightCuarteto-main\FridayNightCuarteto-main\FridayNightCuarteto\bin\Debug\assets\Prota\10.gif
@@ -202,3 +192,15 @@ C:\Users\lauli\Downloads\FridayNightCuarteto-main (2)\FridayNightCuarteto-main\F
 C:\Users\lauli\Downloads\FridayNightCuarteto-main (2)\FridayNightCuarteto-main\FridayNightCuarteto-main\FridayNightCuarteto\obj\Debug\MyGame.csproj.Up2Date
 C:\Users\lauli\Downloads\FridayNightCuarteto-main (2)\FridayNightCuarteto-main\FridayNightCuarteto-main\FridayNightCuarteto\obj\Debug\MyGame.exe
 C:\Users\lauli\Downloads\FridayNightCuarteto-main (2)\FridayNightCuarteto-main\FridayNightCuarteto-main\FridayNightCuarteto\obj\Debug\MyGame.pdb
+C:\Users\lauli\Downloads\FridayNightCuarteto-main (2)\FridayNightCuarteto-main\FridayNightCuarteto-main\FridayNightCuarteto\bin\Debug\assets\Background.jpg
+C:\Users\lauli\Downloads\FridayNightCuarteto-main (2)\FridayNightCuarteto-main\FridayNightCuarteto-main\FridayNightCuarteto\bin\Debug\assets\MainMenu.png
+C:\Users\lauli\Downloads\FridayNightCuarteto-main (2)\FridayNightCuarteto-main\FridayNightCuarteto-main\FridayNightCuarteto\bin\Debug\assets\Win.jpg
+C:\Users\lauli\Downloads\FridayNightCuarteto-main (2)\FridayNightCuarteto-main\FridayNightCuarteto-main\FridayNightCuarteto\bin\Debug\assets\Lose.jpg
+C:\Users\lauli\Downloads\FridayNightCuarteto-main (2)\FridayNightCuarteto-main\FridayNightCuarteto-main\FridayNightCuarteto\bin\Debug\assets\DownArrow.png
+C:\Users\lauli\Downloads\FridayNightCuarteto-main (2)\FridayNightCuarteto-main\FridayNightCuarteto-main\FridayNightCuarteto\bin\Debug\assets\DownArrowU.png
+C:\Users\lauli\Downloads\FridayNightCuarteto-main (2)\FridayNightCuarteto-main\FridayNightCuarteto-main\FridayNightCuarteto\bin\Debug\assets\LeftArrow.png
+C:\Users\lauli\Downloads\FridayNightCuarteto-main (2)\FridayNightCuarteto-main\FridayNightCuarteto-main\FridayNightCuarteto\bin\Debug\assets\LeftArrowU.png
+C:\Users\lauli\Downloads\FridayNightCuarteto-main (2)\FridayNightCuarteto-main\FridayNightCuarteto-main\FridayNightCuarteto\bin\Debug\assets\RightArrow.png
+C:\Users\lauli\Downloads\FridayNightCuarteto-main (2)\FridayNightCuarteto-main\FridayNightCuarteto-main\FridayNightCuarteto\bin\Debug\assets\RightArrowU.png
+C:\Users\lauli\Downloads\FridayNightCuarteto-main (2)\FridayNightCuarteto-main\FridayNightCuarteto-main\FridayNightCuarteto\bin\Debug\assets\UpArrow.png
+C:\Users\lauli\Downloads\FridayNightCuarteto-main (2)\FridayNightCuarteto-main\FridayNightCuarteto-main\FridayNightCuarteto\bin\Debug\assets\UpArrowU.png

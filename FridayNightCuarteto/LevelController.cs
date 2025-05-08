@@ -10,7 +10,7 @@ namespace MyGame
     public class LevelController
     {
         private List<Arrows> arrowList = new List<Arrows>();
-        private Image fondo = Engine.LoadImage("assets/fondo.png");
+        private Image fondo = Engine.LoadImage("assets/Background.jpg");
         private Player player1;
 
         public List<Arrows> ArrowList => arrowList;
@@ -22,6 +22,8 @@ namespace MyGame
         private int arrowsYPos = 20;
 
         private static Stopwatch stopwatch = new Stopwatch();
+
+        public Stopwatch Stopwatch => stopwatch;
 
         public Player Player1 => player1;
 
@@ -496,13 +498,18 @@ namespace MyGame
 
         public void EndLevel()
         {
-            if (stopwatch.Elapsed.TotalSeconds >= 218)
+            if (stopwatch.Elapsed.TotalSeconds >= 228)
             {
-                if (GameManager.Instance.Points.RythmPoints >= 3450)
+                stopwatch.Restart();
+                InitializeLevel();
+
+                if (GameManager.Instance.Points.RythmPoints >= 3050)
                 {
+                    GameManager.Instance.Points.RythmPoints = -GameManager.Instance.Points.RythmPoints;
                     GameManager.Instance.ChangeStage(GameStage.win);
                 }else
                 {
+                    GameManager.Instance.Points.RythmPoints = -GameManager.Instance.Points.RythmPoints;
                     GameManager.Instance.ChangeStage(GameStage.lose);
                 }
             }
@@ -510,7 +517,6 @@ namespace MyGame
 
         public void Update()
         {
-
             player1.Update();
 
             for (int i = 0; i < arrowList.Count; i++)
@@ -519,7 +525,6 @@ namespace MyGame
             }
 
             EndLevel();
-
         }
         public void Render()
         {
