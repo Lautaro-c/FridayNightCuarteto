@@ -10,7 +10,7 @@ namespace MyGame
     public class Points
     {
         private int rythmPoints;
-
+        private int masPointsRecieved = 20;
         public int RythmPoints
         { 
             get 
@@ -19,7 +19,7 @@ namespace MyGame
             }
             set 
             {
-                if (value < 20)
+                if (value < masPointsRecieved)
                 {
                     rythmPoints += value;
                     Engine.Debug($"{rythmPoints}");

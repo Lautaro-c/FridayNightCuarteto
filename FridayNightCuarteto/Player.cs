@@ -49,7 +49,7 @@ namespace MyGame
 
         public void Render()
         {
-            Engine.Draw(animation.CurrentImage, transform.Pos.x +250 , transform.Pos.y + 250);
+            Engine.Draw(animation.CurrentImage, transform.Pos.x, transform.Pos.y);
         }
     }
 }

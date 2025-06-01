@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,7 +19,8 @@ namespace MyGame
 
         private bool canMove = false;
         private bool isStatic = false;
-
+        private int sizeValue = 76;
+        private int screenLimit = 152;
         private float spawnTime;
 
         public Transform Transform => transform;
@@ -28,7 +30,7 @@ namespace MyGame
         public Arrows(float positionX, float positionY, bool isStatic, float spawnTime)
         {
             transform = new Transform(positionX, positionY);
-            size = new Transform(76, 76);
+            size = new Transform(sizeValue, sizeValue);
             arrowMovement = new ArrowMovement(transform);
             this.isStatic = isStatic;
             this.spawnTime = spawnTime;
@@ -47,7 +49,7 @@ namespace MyGame
             {
                 arrowMovement.Update();
             }
-            if (transform.Pos.y <= -152)
+            if (transform.Pos.y <= -screenLimit)
             {
                 DestroyArrow();
             }

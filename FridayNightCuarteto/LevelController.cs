@@ -18,6 +18,9 @@ namespace MyGame
         private int upArrowPos = 828;
         private int rightArrowPos = 928;
         private int arrowsYPos = 20;
+        private int endLevelTime = 228;
+        private int gamePointsToWin = 3050;
+        private int initialPlayerPosition = 300;
 
         public List<Arrows> ArrowList => arrowList;
         public Stopwatch Stopwatch => stopwatch;
@@ -488,18 +491,18 @@ namespace MyGame
             arrowList.Add(new Arrows(downArrowPos, 768, false, 212.74f));
             arrowList.Add(new Arrows(leftArrowPos, 768, false, 213.30f));
 
-            player1 = new Player(0, 0);
+            player1 = new Player(initialPlayerPosition, initialPlayerPosition);
             stopwatch.Start();
         }
 
         public void EndLevel()
         {
-            if (stopwatch.Elapsed.TotalSeconds >= 228)
+            if (stopwatch.Elapsed.TotalSeconds >= endLevelTime)
             {
                 stopwatch.Restart();
                 InitializeLevel();
 
-                if (GameManager.Instance.Points.RythmPoints >= 3050)
+                if (GameManager.Instance.Points.RythmPoints >= gamePointsToWin)
                 {
                     GameManager.Instance.Points.RythmPoints = -GameManager.Instance.Points.RythmPoints;
                     GameManager.Instance.ChangeStage(GameStage.win);
