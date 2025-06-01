@@ -21,6 +21,7 @@ namespace MyGame
         private float sizeValue = 76;
         private int screenLimit = 152;
         private float spawnTime;
+        private Renderer renderer;
 
         public Transform Transform => transform;
         public Image ArrowImage => arrowImage;
@@ -33,6 +34,7 @@ namespace MyGame
             this.spawnTime = spawnTime;
             choseArrowImage = new ChoseArrowImage(transform, isStatic);
             arrowImage = choseArrowImage.GetImage();
+            renderer = new Renderer();
         }
 
         public void Update()
@@ -54,7 +56,8 @@ namespace MyGame
 
         public void Render()
         {
-            Engine.Draw(arrowImage, transform.Pos.x, transform.Pos.y);
+            renderer.Render(arrowImage, transform);
+            //Engine.Draw(arrowImage, transform.Pos.x, transform.Pos.y);
         }
 
         public void DestroyArrow()
