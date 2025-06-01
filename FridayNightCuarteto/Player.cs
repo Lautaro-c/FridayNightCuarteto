@@ -13,13 +13,14 @@ namespace MyGame
         private PlayerController playerControl;
         private PlayerMovement playerMovement;
         private Transform transform;
+        private float sizeValue = 120;
         
         public Transform Transform => transform;
         public PlayerMovement PlayerMovement => playerMovement;
        
         public Player(float positionX, float positionY)
         {
-            transform = new Transform(positionX, positionY);
+            transform = new Transform(positionX, positionY, sizeValue, sizeValue, 0f, 0f);
             playerControl = new PlayerController();
             playerMovement = new PlayerMovement(transform);
             CreateAnimaton();

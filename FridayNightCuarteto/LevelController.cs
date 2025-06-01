@@ -26,6 +26,9 @@ namespace MyGame
         public Stopwatch Stopwatch => stopwatch;
         public Player Player1 => player1;
 
+        //public delegate void OnLevelEnd();
+        //public event OnLevelEnd onLevelEnd;
+
 
 
         public void InitializeLevel()

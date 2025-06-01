@@ -14,23 +14,20 @@ namespace MyGame
         private Image arrowImage; 
         private ChoseArrowImage choseArrowImage;
         private Transform transform;
-        private Transform size; 
         private ArrowMovement arrowMovement;
 
         private bool canMove = false;
         private bool isStatic = false;
-        private int sizeValue = 76;
+        private float sizeValue = 76;
         private int screenLimit = 152;
         private float spawnTime;
 
         public Transform Transform => transform;
-        public Transform Size => size;
         public Image ArrowImage => arrowImage;
 
         public Arrows(float positionX, float positionY, bool isStatic, float spawnTime)
         {
-            transform = new Transform(positionX, positionY);
-            size = new Transform(sizeValue, sizeValue);
+            transform = new Transform(positionX, positionY, sizeValue, sizeValue, 0F, 0F);
             arrowMovement = new ArrowMovement(transform);
             this.isStatic = isStatic;
             this.spawnTime = spawnTime;
