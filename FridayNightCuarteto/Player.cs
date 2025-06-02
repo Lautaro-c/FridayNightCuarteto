@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace MyGame
 {
-    public class Player
+    public class Player:GameObject
     {
         private Animation animation;
         private PlayerController playerControl;
         private PlayerMovement playerMovement;
-        private Transform transform;
+       
         private float sizeValue = 120;
-        private Renderer renderer;
+        
         
         public Transform Transform => transform;
         public PlayerMovement PlayerMovement => playerMovement;

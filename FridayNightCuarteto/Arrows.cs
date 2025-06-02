@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace MyGame
 {
-    public class Arrows
+    public class Arrows:GameObject
     {
 
         private Image arrowImage; 
         private ChoseArrowImage choseArrowImage;
-        private Transform transform;
+       
         private ArrowMovement arrowMovement;
 
         private bool canMove = false;
@@ -21,7 +21,7 @@ namespace MyGame
         private float sizeValue = 76;
         private int screenLimit = 152;
         private float spawnTime;
-        private Renderer renderer;
+        
 
         public Transform Transform => transform;
         public Image ArrowImage => arrowImage;
