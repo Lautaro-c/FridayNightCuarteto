@@ -50,8 +50,9 @@
     <Compile Include="Animation.cs" />
     <Compile Include="ArrowMovement.cs" />
     <Compile Include="Arrows.cs" />
+    <Compile Include="ArrowsFactory.cs" />
     <Compile Include="ChoseArrowImage.cs" />
-    <Compile Include="Collition.cs" />
+    <Compile Include="Collider.cs" />
     <Compile Include="Engine\Font.cs" />
     <Compile Include="Engine\Engine.cs" />
     <Compile Include="Engine\Image.cs" />

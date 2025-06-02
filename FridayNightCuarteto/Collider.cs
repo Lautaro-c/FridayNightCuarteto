@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MyGame
 {
-    public class Collition
+    public class Collider
     {
         static private List<Arrows> arrowList;
         static private List<Arrows> leftArrowList = new List<Arrows>();
@@ -19,10 +19,10 @@ namespace MyGame
         private int upArrowPos = 828;
         private int rightArrowPos = 928;
         private float arrowsYPos = 20;
-        private float arrowsHeight = 76; 
+        private float arrowsHeight = 76;
         private int givenPoints = 10;
 
-        public Collition()
+        public Collider()
         {
             arrowList = GameManager.Instance.LevelController.ArrowList;
             GetArrows();
