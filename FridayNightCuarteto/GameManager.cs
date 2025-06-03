@@ -20,9 +20,12 @@ namespace MyGame
         private Image loseScreen = Engine.LoadImage("assets/Lose.jpg");
         private LevelController levelController;
         private Points points;
+        private bool songStarted = false;
         public LevelController LevelController => levelController;
         public Points Points => points;
+        
 
+        public SongManager SongManager; 
         static public GameManager Instance
         {
             get
@@ -41,6 +44,7 @@ namespace MyGame
             levelController = new LevelController();
             points = new Points();
             levelController.InitializeLevel();
+            SongManager = new SongManager();
         }
 
         public void Update()
@@ -54,18 +58,25 @@ namespace MyGame
                     }
                     break;
                 case GameStage.game:
+                    if (!songStarted)
+                    {
+                        SongManager.startSong();
+                        songStarted = true;
+                    }
                     levelController.Update();
                     break;
                 case GameStage.win:
-                    if (Engine.GetKey(Engine.KEY_ESP))
+                    if (Engine.GetKey(Engine.KEY_ESC))
                     {
                         ChangeStage(GameStage.menu);
+                        songStarted = false;
                     }
                     break;
                 case GameStage.lose:
-                    if (Engine.GetKey(Engine.KEY_ESP))
+                    if (Engine.GetKey(Engine.KEY_ESC))
                     {
                         ChangeStage(GameStage.menu);
+                        songStarted = false;
                     }
                     break;
             }

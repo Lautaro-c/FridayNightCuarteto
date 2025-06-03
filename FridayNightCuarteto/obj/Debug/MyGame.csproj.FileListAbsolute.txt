@@ -266,3 +266,24 @@ C:\Users\lauli\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuartet
 C:\Users\lauli\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\assets\UpArrow.png
 C:\Users\lauli\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\assets\UpArrowU.png
 C:\Users\lauli\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\assets\Win.jpg
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\assets\songs\Enamorado tuyo - El Cuarteto de Nos.mp3
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\Microsoft.Win32.Registry.dll
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\NAudio.Asio.dll
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\NAudio.Core.dll
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\NAudio.dll
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\NAudio.Midi.dll
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\NAudio.Wasapi.dll
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\NAudio.WinForms.dll
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\NAudio.WinMM.dll
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\System.Security.AccessControl.dll
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\Microsoft.Win32.Registry.xml
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\NAudio.xml
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\NAudio.Asio.xml
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\NAudio.Core.xml
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\NAudio.Midi.xml
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\NAudio.Wasapi.xml
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\NAudio.WinForms.xml
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\NAudio.WinMM.xml
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\System.Security.AccessControl.xml
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\System.Security.Principal.Windows.xml

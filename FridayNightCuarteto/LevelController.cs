@@ -33,6 +33,8 @@ namespace MyGame
 
         public void InitializeLevel()
         {
+            
+
             arrowList.Add(ArrowsFactory.CreateArrows(ArrowType.rightArrowS, 0f));
             arrowList.Add(ArrowsFactory.CreateArrows(ArrowType.upArrowS, 0f));
             arrowList.Add(ArrowsFactory.CreateArrows(ArrowType.downArrowS, 0f));
@@ -572,6 +574,9 @@ namespace MyGame
             }
 
             Engine.Show();
+
+            
+            
         }
     }
 }
