@@ -18,17 +18,14 @@ namespace MyGame
 
         private bool canMove = false;
         private bool isStatic = false;
-        private float sizeValue = 76;
+        private static float sizeValue = 76;
         private int screenLimit = 152;
         private float spawnTime;
         
-
-        public Transform Transform => transform;
         public Image ArrowImage => arrowImage;
 
-        public Arrows(float positionX, float positionY, bool isStatic, float spawnTime)
+        public Arrows(float positionX, float positionY, bool isStatic, float spawnTime) : base(positionX, positionY, sizeValue, sizeValue, 0f, 0f)
         {
-            transform = new Transform(positionX, positionY, sizeValue, sizeValue, 0F, 0F);
             arrowMovement = new ArrowMovement(transform);
             this.isStatic = isStatic;
             this.spawnTime = spawnTime;
@@ -37,7 +34,7 @@ namespace MyGame
             renderer = new Renderer();
         }
 
-        public void Update()
+        public override void Update()
         {
             if (GameManager.Instance.LevelController.Stopwatch.Elapsed.TotalSeconds >= spawnTime)
             {
@@ -54,7 +51,7 @@ namespace MyGame
             }
         }
 
-        public void Render()
+        public override void Render()
         {
             renderer.Render(arrowImage, transform);
             //Engine.Draw(arrowImage, transform.Pos.x, transform.Pos.y);

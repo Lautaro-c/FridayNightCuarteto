@@ -7,23 +7,20 @@ using System.Threading.Tasks;
 
 namespace MyGame
 {
-    public class Player:GameObject
+    public class Player : GameObject
     {
         private Animation animation;
         private PlayerController playerControl;
         private PlayerMovement playerMovement;
        
-        private float sizeValue = 120;
+        private static float sizeValue = 120;
         
-        
-        public Transform Transform => transform;
         public PlayerMovement PlayerMovement => playerMovement;
 
 
        
-        public Player(float positionX, float positionY)
+        public Player(float positionX, float positionY) : base(positionX, positionY, sizeValue, sizeValue, 0f, 0f)
         {
-            transform = new Transform(positionX, positionY, sizeValue, sizeValue, 0f, 0f);
             playerControl = new PlayerController();
             playerMovement = new PlayerMovement(transform);
             renderer = new Renderer();
@@ -44,14 +41,14 @@ namespace MyGame
             animation = new Animation("Prota", true, 0.1f, images);
         }
 
-        public void Update()
+        public override void Update()
         {
             playerControl.Update();
             animation.Update();
         }
 
 
-        public void Render()
+        public override void Render()
         {
             renderer.Render(animation.CurrentImage, transform);
             //Engine.Draw(animation.CurrentImage, transform.Pos.x, transform.Pos.y);
