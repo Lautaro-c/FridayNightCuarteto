@@ -287,3 +287,15 @@ C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuartet
 C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\NAudio.WinMM.xml
 C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\System.Security.AccessControl.xml
 C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\assets\AnimationArrow\down\0.png
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\assets\AnimationArrow\down\1.png
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\assets\AnimationArrow\down\2.png
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\assets\AnimationArrow\left\0.png
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\assets\AnimationArrow\left\1.png
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\assets\AnimationArrow\left\2.png
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\assets\AnimationArrow\right\0.png
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\assets\AnimationArrow\right\1.png
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\assets\AnimationArrow\right\2.png
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\assets\AnimationArrow\up\0.png
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\assets\AnimationArrow\up\1.png
+C:\Users\rodri\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\assets\AnimationArrow\up\2.png

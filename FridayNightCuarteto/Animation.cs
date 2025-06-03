@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyGame
 {
-    internal class Animation
+    public class Animation
     {
         private string name;
         private bool isLooping;
@@ -15,6 +15,8 @@ namespace MyGame
         private float actualTime;
         private int actualFrame;
         public Image CurrentImage => image[actualFrame];
+        public bool IsFinished => !isLooping && actualFrame == image.Count - 1;
+
 
         public Animation(string name, bool isLooping, float speed, List<Image> image)
         {
@@ -27,8 +29,9 @@ namespace MyGame
         public void Update()
         {
             actualTime += Time.DeltaTime;
+           
 
-            if(actualTime > speed) 
+            if (actualTime > speed) 
             {
                 actualTime = 0;
                 actualFrame++;

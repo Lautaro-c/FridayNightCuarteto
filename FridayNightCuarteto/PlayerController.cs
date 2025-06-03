@@ -33,6 +33,9 @@ namespace MyGame
                     collider.GetLeftCollition();
                     lastTimeLeftArrow = DateTime.Now;
                     GameManager.Instance.LevelController.Player1.PlayerMovement.MovePlayer(-speed, 0);
+                    GameManager.Instance.LevelController.TriggerArrowAnimation(LevelController.ArrowDirection.Left); // o Right / Up / Down
+
+
                 }
             }
 
@@ -44,6 +47,7 @@ namespace MyGame
                     collider.GetRightCollition();
                     lastTimeRightArrow = DateTime.Now;
                     GameManager.Instance.LevelController.Player1.PlayerMovement.MovePlayer(speed, 0);
+                    GameManager.Instance.LevelController.TriggerArrowAnimation(LevelController.ArrowDirection.Right);
                 }
             }
 
@@ -55,6 +59,7 @@ namespace MyGame
                     collider.GetUpCollition();
                     lastTimeUpArrow = DateTime.Now;
                     GameManager.Instance.LevelController.Player1.PlayerMovement.MovePlayer(0, -speed);
+                    GameManager.Instance.LevelController.TriggerArrowAnimation(LevelController.ArrowDirection.Up);
                 }
             }
 
@@ -66,6 +71,7 @@ namespace MyGame
                     collider.GetDownCollition();
                     lastTimeDownArrow = DateTime.Now;
                     GameManager.Instance.LevelController.Player1.PlayerMovement.MovePlayer(0, speed);
+                    GameManager.Instance.LevelController.TriggerArrowAnimation(LevelController.ArrowDirection.Down);
                 }
             }
 

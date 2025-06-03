@@ -13,7 +13,9 @@ namespace MyGame
 
         private Image arrowImage; 
         private ChoseArrowImage choseArrowImage;
-       
+        private Animation animation;
+        
+        private bool isPlayingAnimation = false;
         private ArrowMovement arrowMovement;
 
         private bool canMove = false;
@@ -23,6 +25,8 @@ namespace MyGame
         private float spawnTime;
         
         public Image ArrowImage => arrowImage;
+        public bool IsStatic() => isStatic;
+        public float PositionX => transform.Pos.x;
 
         public Arrows(float positionX, float positionY, bool isStatic, float spawnTime) : base(positionX, positionY, sizeValue, sizeValue, 0f, 0f)
         {
@@ -32,16 +36,20 @@ namespace MyGame
             choseArrowImage = new ChoseArrowImage(transform, isStatic);
             arrowImage = choseArrowImage.GetImage();
             renderer = new Renderer();
+
+        
         }
 
         public override void Update()
         {
+
+           
             if (GameManager.Instance.LevelController.Stopwatch.Elapsed.TotalSeconds >= spawnTime)
             {
                 canMove = true;
             }
 
-            if(canMove && isStatic == false)
+            if (canMove && isStatic == false)
             {
                 arrowMovement.Update();
             }
@@ -49,10 +57,71 @@ namespace MyGame
             {
                 DestroyArrow();
             }
+
+            if (isPlayingAnimation)
+            {
+                animation.Update();
+
+                if (animation.IsFinished)
+                {
+                    isPlayingAnimation = false;
+                    animation = null;
+                    arrowImage = choseArrowImage.GetImage();
+                }
+                else
+                {
+                    arrowImage = animation.CurrentImage;
+                }
+            }
+
+
         }
+        public void PlayAnimation()
+        {
+            if (animation == null)
+            {
+                string direction = "";
+
+             
+                switch ((int)transform.Pos.x)
+                {
+                    case 628:
+                        direction = "left";
+                        break;
+                    case 728:
+                        direction = "down";
+                        break;
+                    case 828:
+                        direction = "up";
+                        break;
+                    case 928:
+                        direction = "right";
+                        break;
+                    default:
+                        direction = "down"; 
+                        break;
+                }
+                if (!isPlayingAnimation) 
+                {
+                    List<Image> images = new List<Image>();
+                    for (int i = 0; i < 3; i++) 
+                    {
+                        Image image = Engine.LoadImage($"assets/AnimationArrow/{direction}/{i}.png");
+                        images.Add(image);
+                    }
+
+                    animation = new Animation("arrow", false, 0.12f, images);
+                }
+            }
+
+            isPlayingAnimation = true;
+        }
+
+
 
         public override void Render()
         {
+            
             renderer.Render(arrowImage, transform);
             //Engine.Draw(arrowImage, transform.Pos.x, transform.Pos.y);
         }
@@ -61,5 +130,7 @@ namespace MyGame
         { 
            GameManager.Instance.LevelController.ArrowList.Remove(this);   
         }
+
+
     }
 }

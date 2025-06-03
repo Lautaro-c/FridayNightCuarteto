@@ -111,6 +111,55 @@
     <Folder Include="bin\Release\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\AnimationArrow\down1.png" />
+    <Content Include="assets\AnimationArrow\down2.png" />
+    <Content Include="assets\AnimationArrow\down3.png" />
+    <Content Include="assets\AnimationArrow\down\2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\AnimationArrow\down\1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\AnimationArrow\down\0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\AnimationArrow\left1.png" />
+    <Content Include="assets\AnimationArrow\left2.png" />
+    <Content Include="assets\AnimationArrow\left3.png" />
+    <Content Include="assets\AnimationArrow\left\2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\AnimationArrow\left\0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\AnimationArrow\left\1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\AnimationArrow\right1.png" />
+    <Content Include="assets\AnimationArrow\right2.png" />
+    <Content Include="assets\AnimationArrow\right3.png" />
+    <Content Include="assets\AnimationArrow\right\2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\AnimationArrow\right\0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\AnimationArrow\right\1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\AnimationArrow\tile015.png" />
+    <Content Include="assets\AnimationArrow\up1.png" />
+    <Content Include="assets\AnimationArrow\up2.png" />
+    <Content Include="assets\AnimationArrow\up3.png" />
+    <Content Include="assets\AnimationArrow\up\2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\AnimationArrow\up\0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\AnimationArrow\up\1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="assets\Background.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

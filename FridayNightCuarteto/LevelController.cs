@@ -39,10 +39,6 @@ namespace MyGame
             arrowList.Add(ArrowsFactory.CreateArrows(ArrowType.upArrowS, 0f));
             arrowList.Add(ArrowsFactory.CreateArrows(ArrowType.downArrowS, 0f));
             arrowList.Add(ArrowsFactory.CreateArrows(ArrowType.leftArrowS, 0f));
-            arrowList.Add(ArrowsFactory.CreateArrows(ArrowType.rightArrowS, 0f));
-            arrowList.Add(ArrowsFactory.CreateArrows(ArrowType.upArrowS, 0f));
-            arrowList.Add(ArrowsFactory.CreateArrows(ArrowType.downArrowS, 0f));
-            arrowList.Add(ArrowsFactory.CreateArrows(ArrowType.leftArrowS, 0f));
             arrowList.Add(ArrowsFactory.CreateArrows(ArrowType.leftArrow, 18.94f));
             arrowList.Add(ArrowsFactory.CreateArrows(ArrowType.rightArrow, 19.46f));
             arrowList.Add(ArrowsFactory.CreateArrows(ArrowType.upArrow, 19.95f));
@@ -550,6 +546,47 @@ namespace MyGame
                 }
             }
         }
+
+        public enum ArrowDirection
+        {
+            Left,
+            Right,
+            Up,
+            Down
+        }
+
+        public void TriggerArrowAnimation(ArrowDirection direction)
+        {
+            float targetX = 0;
+
+            switch (direction)
+            {
+                case ArrowDirection.Left:
+                    targetX = 628;
+                    break;
+                case ArrowDirection.Down:
+                    targetX = 728;
+                    break;
+                case ArrowDirection.Up:
+                    targetX = 828;
+                    break;
+                case ArrowDirection.Right:
+                    targetX = 928;
+                    break;
+            }
+
+            foreach (var arrow in arrowList)
+            {
+                if (arrow.IsStatic() && Math.Abs(arrow.PositionX - targetX) < 1f)
+                {
+                    arrow.PlayAnimation();
+                }
+            }
+        }
+
+          
+
+
 
         public void Update()
         {
