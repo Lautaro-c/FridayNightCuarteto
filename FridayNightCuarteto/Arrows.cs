@@ -8,13 +8,12 @@ using System.Threading.Tasks;
 
 namespace MyGame
 {
-    public class Arrows:GameObject
+    public class Arrows : GameObject, IAnimatable
     {
-
-        private Image arrowImage; 
+        private Image arrowImage;
         private ChoseArrowImage choseArrowImage;
         private Animation animation;
-        
+
         private bool isPlayingAnimation = false;
         private ArrowMovement arrowMovement;
 
@@ -23,12 +22,13 @@ namespace MyGame
         private static float sizeValue = 76;
         private int screenLimit = 152;
         private float spawnTime;
-        
+
         public Image ArrowImage => arrowImage;
         public bool IsStatic() => isStatic;
         public float PositionX => transform.Pos.x;
 
-        public Arrows(float positionX, float positionY, bool isStatic, float spawnTime) : base(positionX, positionY, sizeValue, sizeValue, 0f, 0f)
+        public Arrows(float positionX, float positionY, bool isStatic, float spawnTime)
+            : base(positionX, positionY, sizeValue, sizeValue, 0f, 0f)
         {
             arrowMovement = new ArrowMovement(transform);
             this.isStatic = isStatic;
@@ -36,33 +36,15 @@ namespace MyGame
             choseArrowImage = new ChoseArrowImage(transform, isStatic);
             arrowImage = choseArrowImage.GetImage();
             renderer = new Renderer();
-
-        
         }
 
-        public override void Update()
+        public void UpdateAnimation()
         {
-
-           
-            if (GameManager.Instance.LevelController.Stopwatch.Elapsed.TotalSeconds >= spawnTime)
-            {
-                canMove = true;
-            }
-
-            if (canMove && isStatic == false)
-            {
-                arrowMovement.Update();
-            }
-            if (transform.Pos.y <= -screenLimit)
-            {
-                DestroyArrow();
-            }
-
             if (isPlayingAnimation)
             {
-                animation.Update();
+                animation?.Update();
 
-                if (animation.IsFinished)
+                if (animation != null && animation.IsFinished)
                 {
                     isPlayingAnimation = false;
                     animation = null;
@@ -70,19 +52,27 @@ namespace MyGame
                 }
                 else
                 {
-                    arrowImage = animation.CurrentImage;
+                    arrowImage = animation?.CurrentImage;
                 }
             }
-
-
         }
+
+        public Image GetCurrentFrame()
+        {
+            return arrowImage;
+        }
+
+        public void CreateAnimation()
+        {
+        
+        }
+
         public void PlayAnimation()
         {
             if (animation == null)
             {
                 string direction = "";
 
-             
                 switch ((int)transform.Pos.x)
                 {
                     case 628:
@@ -98,13 +88,14 @@ namespace MyGame
                         direction = "right";
                         break;
                     default:
-                        direction = "down"; 
+                        direction = "down";
                         break;
                 }
-                if (!isPlayingAnimation) 
+
+                if (!isPlayingAnimation)
                 {
                     List<Image> images = new List<Image>();
-                    for (int i = 0; i < 3; i++) 
+                    for (int i = 0; i < 3; i++)
                     {
                         Image image = Engine.LoadImage($"assets/AnimationArrow/{direction}/{i}.png");
                         images.Add(image);
@@ -117,20 +108,30 @@ namespace MyGame
             isPlayingAnimation = true;
         }
 
+        public override void Update()
+        {
+            if (GameManager.Instance.LevelController.Stopwatch.Elapsed.TotalSeconds >= spawnTime)
+                canMove = true;
 
+            if (canMove && !isStatic)
+                arrowMovement.Update();
+
+            if (transform.Pos.y <= -screenLimit)
+                DestroyArrow();
+
+            UpdateAnimation();
+        }
 
         public override void Render()
         {
-            
-            renderer.Render(arrowImage, transform);
-            //Engine.Draw(arrowImage, transform.Pos.x, transform.Pos.y);
+            renderer.Render(GetCurrentFrame(), transform); 
         }
 
         public void DestroyArrow()
-        { 
-           GameManager.Instance.LevelController.ArrowList.Remove(this);   
+        {
+            GameManager.Instance.LevelController.ArrowList.Remove(this);
         }
-
-
+       
     }
+
 }
