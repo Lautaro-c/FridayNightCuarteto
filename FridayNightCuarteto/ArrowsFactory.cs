@@ -46,18 +46,6 @@ namespace MyGame
         {
             switch (arrowType)
             {
-                case ArrowType.leftArrow:
-                    return new Arrows(leftArrowPos, arrowsYPos, false, time);
-                    break;
-                case ArrowType.rightArrow:
-                    return new Arrows(rightArrowPos, arrowsYPos, false, time);
-                    break;
-                case ArrowType.upArrow:
-                    return new Arrows(upArrowPos, arrowsYPos, false, time);
-                    break;
-                case ArrowType.downArrow:
-                    return new Arrows(downArrowPos, arrowsYPos, false, time);
-                    break;
                 case ArrowType.leftArrowS:
                     return new Arrows(leftArrowPos, staticArrowsYPos, true, time);
                     break;

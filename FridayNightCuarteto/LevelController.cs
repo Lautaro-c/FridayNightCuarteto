@@ -38,7 +38,6 @@ namespace MyGame
             arrowList.Add(ArrowsFactory.CreateArrows(ArrowType.upArrowS, 0f));
             arrowList.Add(ArrowsFactory.CreateArrows(ArrowType.downArrowS, 0f));
             arrowList.Add(ArrowsFactory.CreateArrows(ArrowType.leftArrowS, 0f));
-            arrowsFactory.SpawnArrows(ArrowType.leftArrow, 5f);
             arrowsFactory.SpawnArrows(ArrowType.leftArrow, 18.94f);
             arrowsFactory.SpawnArrows(ArrowType.rightArrow, 19.46f);
             arrowsFactory.SpawnArrows(ArrowType.upArrow, 19.95f);

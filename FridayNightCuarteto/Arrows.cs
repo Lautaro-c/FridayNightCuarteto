@@ -124,11 +124,14 @@ namespace MyGame
                 canMove = true;
 
             if (canMove && !isStatic)
+            {
                 arrowMovement.Update();
+            }
 
             if (transform.Pos.y <= -screenLimit)
+            {
                 DestroyArrow();
-
+            }
             UpdateAnimation();
         }
 

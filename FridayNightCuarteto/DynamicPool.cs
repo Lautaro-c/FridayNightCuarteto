@@ -49,6 +49,7 @@ namespace MyGame
             active.Remove(T);
             inactive.Add(T);
             Engine.Debug("Elimine una T");
+            VerTDisponibles();
         }
 
         public void VerTDisponibles()
