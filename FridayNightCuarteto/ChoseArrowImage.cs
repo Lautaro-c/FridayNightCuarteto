@@ -83,6 +83,11 @@ namespace MyGame
                     }
                     break;
             }
+
+            if (arrowImage == null)
+            {
+                arrowImage = rightArrowImage;
+            }
             
         }
     }

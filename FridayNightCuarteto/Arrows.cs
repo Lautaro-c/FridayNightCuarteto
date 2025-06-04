@@ -22,10 +22,21 @@ namespace MyGame
         private static float sizeValue = 76;
         private int screenLimit = 152;
         private float spawnTime;
+        private float maxTime = 300;
 
         public Image ArrowImage => arrowImage;
         public bool IsStatic() => isStatic;
         public float PositionX => transform.Pos.x;
+        public float SpawnTime
+        {
+            set
+            {
+                if (value < maxTime)
+                {
+                    spawnTime = value;            
+                }
+            }
+        }
 
         public Arrows(float positionX, float positionY, bool isStatic, float spawnTime)
             : base(positionX, positionY, sizeValue, sizeValue, 0f, 0f)
@@ -129,6 +140,24 @@ namespace MyGame
         public void DestroyArrow()
         {
             GameManager.Instance.LevelController.ArrowList.Remove(this);
+            InvokeOnDeactive(this);
+        }
+
+        public void IsStaticFalse()
+        {
+            isStatic = false;
+        }
+
+        public void IsStaticTrue()
+        { 
+            isStatic = true; 
+        }
+
+
+        public void ChooseImage()
+        {
+            choseArrowImage = new ChoseArrowImage(transform, isStatic);
+            arrowImage = choseArrowImage.GetImage();
         }
        
     }

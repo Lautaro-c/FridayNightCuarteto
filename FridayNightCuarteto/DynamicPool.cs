@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,7 +17,7 @@ namespace MyGame
         private object[] constructorParams;
 
         //params permite que varios tipos de variables sin tener que definirlos previamente como un array
-        public DynamicPool(params object[] parameters)
+        public DynamicPool(Type type, params object[] parameters)
         {
             constructorParams = parameters; // Guarda los parámetros para futuras instancias
         }
@@ -61,6 +62,5 @@ namespace MyGame
             //Instancia objetos de una clase con los parametros que guardo
             return (T)Activator.CreateInstance(typeof(T), constructorParams);
         }
-
     }
 }

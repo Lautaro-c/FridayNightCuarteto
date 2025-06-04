@@ -21,6 +21,11 @@ namespace MyGame
             transform = new Transform(positionX, positionY, scaleX, scaleY, rotationX, rotationY);
         }
 
+        public void InvokeOnDeactive(T t)
+        {
+            OnDeactive?.Invoke(t);
+        }
+
         public abstract void Update();
 
         public abstract void Render();

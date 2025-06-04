@@ -15,6 +15,33 @@ namespace MyGame
         private const float rightArrowPos = 928;
         private const float arrowsYPos = 768;
         private const float staticArrowsYPos = 20;
+
+        ArrowsPool arrowPool = new ArrowsPool(250);
+
+        public void SpawnArrows(ArrowType arrowType, float time)
+        {
+            switch (arrowType)
+            {
+                case ArrowType.leftArrow:
+                    Arrows arrow = arrowPool.GetArrow(leftArrowPos, arrowsYPos, false, time);
+                    GameManager.Instance.LevelController.ArrowList.Add(arrow);
+                    break;
+                case ArrowType.rightArrow:
+                    Arrows arrow2 = arrowPool.GetArrow(rightArrowPos, arrowsYPos, false, time);
+                    GameManager.Instance.LevelController.ArrowList.Add(arrow2);
+                    break;
+                case ArrowType.upArrow:
+                    Arrows arrow3 = arrowPool.GetArrow(upArrowPos, arrowsYPos, false, time);
+                    GameManager.Instance.LevelController.ArrowList.Add(arrow3);
+                    break;
+                case ArrowType.downArrow:
+                    Arrows arrow4 = arrowPool.GetArrow(downArrowPos, arrowsYPos, false, time);
+                    GameManager.Instance.LevelController.ArrowList.Add(arrow4);
+                    break;
+
+            }
+        }
+        
         public static Arrows CreateArrows(ArrowType arrowType, float time)
         {
             switch (arrowType)
@@ -46,5 +73,6 @@ namespace MyGame
             }
             return null;
         }
+        
     }
 }

@@ -32,5 +32,11 @@ namespace MyGame
             pos.x += directionX;
             pos.y += directionY;
         }
+
+        public void SetPosition(Vector2 position)
+        {
+            pos.x = position.x;
+            pos.y = position.y;
+        }
     }  
 }
