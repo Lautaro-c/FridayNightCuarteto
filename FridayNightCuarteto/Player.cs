@@ -6,28 +6,27 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace MyGame
+
 {
-    public class Player : GameObject <Player>
+    public class Player : GameObject <Player>, IAnimatable
     {
         private Animation animation;
         private PlayerController playerControl;
         private PlayerMovement playerMovement;
-       
+
         private static float sizeValue = 120;
-        
+
         public PlayerMovement PlayerMovement => playerMovement;
 
-
-       
         public Player(float positionX, float positionY) : base(positionX, positionY, sizeValue, sizeValue, 0f, 0f)
         {
             playerControl = new PlayerController();
             playerMovement = new PlayerMovement(transform);
             renderer = new Renderer();
-            CreateAnimaton();
+            CreateAnimation(); 
         }
 
-        public void CreateAnimaton()
+        public void CreateAnimation()
         {
             List<Image> images = new List<Image>();
 
@@ -39,16 +38,25 @@ namespace MyGame
             animation = new Animation("Prota", true, 0.1f, images);
         }
 
+        public void UpdateAnimation()
+        {
+            animation?.Update();
+        }
+
+        public Image GetCurrentFrame()
+        {
+            return animation?.CurrentImage;
+        }
+
         public override void Update()
         {
             playerControl.Update();
-            animation.Update();
+            UpdateAnimation(); 
         }
-
 
         public override void Render()
         {
-            renderer.Render(animation.CurrentImage, transform);
+            renderer.Render(GetCurrentFrame(), transform);
         }
     }
 }
