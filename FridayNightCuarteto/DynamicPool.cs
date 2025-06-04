@@ -21,7 +21,8 @@ namespace MyGame
         {
             constructorParams = parameters; // Guarda los parámetros para futuras instancias
         }
-
+        public List<T> Active => active;
+        public List<T> Inactive => inactive;
 
 
         public T GetT()
@@ -48,14 +49,14 @@ namespace MyGame
         {
             active.Remove(T);
             inactive.Add(T);
-            Engine.Debug("Elimine una T");
+            //Engine.Debug("Elimine una T");
             VerTDisponibles();
         }
 
         public void VerTDisponibles()
         {
-            Engine.Debug("T disponibles: " + inactive.Count);
-            Engine.Debug("T en uso: " + active.Count);
+            //Engine.Debug("T disponibles: " + inactive.Count);
+            //Engine.Debug("T en uso: " + active.Count);
         }
 
         private T CreateInstance()

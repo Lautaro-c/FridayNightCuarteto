@@ -43,6 +43,7 @@ namespace MyGame
                 if (distanceY <= sumHalfHeights)
                 {
                     GameManager.Instance.Points.RythmPoints = givenPoints;
+                    leftArrowList[i].DestroyArrow();
                     break;
                 }
             }
@@ -57,6 +58,7 @@ namespace MyGame
                 if (distanceY <= sumHalfHeights)
                 {
                     GameManager.Instance.Points.RythmPoints = givenPoints;
+                    upArrowList[i].DestroyArrow();
                     break;
                 }
             }
@@ -71,6 +73,7 @@ namespace MyGame
                 if (distanceY <= sumHalfHeights)
                 {
                     GameManager.Instance.Points.RythmPoints = givenPoints;
+                    downArrowList[i].DestroyArrow();
                     break;
                 }
             }
@@ -85,6 +88,7 @@ namespace MyGame
                 if (distanceY <= sumHalfHeights)
                 {
                     GameManager.Instance.Points.RythmPoints = givenPoints;
+                    rightArrowList[i].DestroyArrow();
                     break;
                 }
             }
@@ -92,6 +96,11 @@ namespace MyGame
 
         private void GetArrows()
         {
+            rightArrowList.Clear();
+            leftArrowList.Clear();
+            downArrowList.Clear();
+            upArrowList.Clear();
+
             for (int i = 0; i < arrowList.Count; i++)
             {
                 if (arrowList[i].Transform.Pos.y != arrowsYPos && arrowList[i].Transform.Pos.x == rightArrowPos)
