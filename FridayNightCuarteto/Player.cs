@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MyGame
 {
-    public class Player : GameObject
+    public class Player : GameObject <Player>
     {
         private Animation animation;
         private PlayerController playerControl;
@@ -36,8 +36,6 @@ namespace MyGame
                 Image image = Engine.LoadImage($"assets/Prota/{i}.gif");
                 images.Add(image);
             }
-
-
             animation = new Animation("Prota", true, 0.1f, images);
         }
 
@@ -51,7 +49,6 @@ namespace MyGame
         public override void Render()
         {
             renderer.Render(animation.CurrentImage, transform);
-            //Engine.Draw(animation.CurrentImage, transform.Pos.x, transform.Pos.y);
         }
     }
 }

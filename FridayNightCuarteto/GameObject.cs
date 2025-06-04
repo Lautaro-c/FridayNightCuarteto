@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace MyGame
 {
-    public abstract class GameObject
+    public abstract class GameObject <T>
     {
         protected Transform transform;
 
         protected Renderer renderer;
 
+        public  event Action<T> OnDeactive;
 
         public Transform Transform => transform;
 

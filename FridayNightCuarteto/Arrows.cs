@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MyGame
 {
-    public class Arrows:GameObject
+    public class Arrows: GameObject<Arrows>
     {
 
         private Image arrowImage; 
@@ -81,8 +81,6 @@ namespace MyGame
             if (animation == null)
             {
                 string direction = "";
-
-             
                 switch ((int)transform.Pos.x)
                 {
                     case 628:
@@ -121,9 +119,7 @@ namespace MyGame
 
         public override void Render()
         {
-            
             renderer.Render(arrowImage, transform);
-            //Engine.Draw(arrowImage, transform.Pos.x, transform.Pos.y);
         }
 
         public void DestroyArrow()
