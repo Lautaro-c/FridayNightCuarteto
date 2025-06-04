@@ -28,6 +28,12 @@ namespace MyGame
             GetArrows();
         }
 
+        public void Update()
+        {
+            arrowList = GameManager.Instance.LevelController.ArrowList;
+            GetArrows();
+        }
+
         public void GetLeftCollition()
         {
             for (int i = 0; i < leftArrowList.Count; i++)

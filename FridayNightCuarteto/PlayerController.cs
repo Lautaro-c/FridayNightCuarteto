@@ -25,6 +25,7 @@ namespace MyGame
 
         public void Update()
         {
+            collider.Update();
             if (Engine.GetKey(Engine.KEY_A))
             {
                 if((DateTime.Now - lastTimeLeftArrow).TotalSeconds >= 0.25)

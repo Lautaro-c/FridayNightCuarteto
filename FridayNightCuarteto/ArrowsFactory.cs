@@ -17,6 +17,30 @@ namespace MyGame
         private const float staticArrowsYPos = 20;
 
         ArrowsPool arrowPool = new ArrowsPool(250);
+        private List<(ArrowType arrowType, float spawnTime)> arrowQueue = new List<(ArrowType, float)>();
+
+        public void Update()
+        {
+            CheckAndSpawnArrows();
+        }
+
+        public void AddArrowToQueue(ArrowType arrowType, float time)
+        {
+            arrowQueue.Add((arrowType, time));
+        }
+
+        public void CheckAndSpawnArrows()
+        {
+            for (int i = 0; i < arrowQueue.Count; i++)
+            {
+                if (GameManager.Instance.LevelController.Stopwatch.Elapsed.TotalSeconds >= arrowQueue[i].spawnTime)
+                {
+                    SpawnArrows(arrowQueue[i].arrowType, 0f);
+                    arrowQueue.RemoveAt(i);
+                }
+            }
+        }
+
 
         public void SpawnArrows(ArrowType arrowType, float time)
         {
@@ -41,7 +65,7 @@ namespace MyGame
 
             }
         }
-        
+
         public static Arrows CreateArrows(ArrowType arrowType, float time)
         {
             switch (arrowType)
@@ -61,6 +85,6 @@ namespace MyGame
             }
             return null;
         }
-        
+
     }
 }

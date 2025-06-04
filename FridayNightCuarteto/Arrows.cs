@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MyGame
 {
-    public class Arrows: GameObject<Arrows>, IAnimatable
+    public class Arrows : GameObject<Arrows>, IAnimatable
     {
         private Image arrowImage;
         private ChoseArrowImage choseArrowImage;
@@ -33,7 +33,7 @@ namespace MyGame
             {
                 if (value < maxTime)
                 {
-                    spawnTime = value;            
+                    spawnTime = value;
                 }
             }
         }
@@ -75,7 +75,7 @@ namespace MyGame
 
         public void CreateAnimation()
         {
-        
+
         }
 
         public void PlayAnimation()
@@ -120,8 +120,7 @@ namespace MyGame
 
         public override void Update()
         {
-            if (GameManager.Instance.LevelController.Stopwatch.Elapsed.TotalSeconds >= spawnTime)
-                canMove = true;
+            canMove = true;
 
             if (canMove && !isStatic)
             {
@@ -137,7 +136,7 @@ namespace MyGame
 
         public override void Render()
         {
-            renderer.Render(GetCurrentFrame(), transform); 
+            renderer.Render(GetCurrentFrame(), transform);
         }
 
         public void DestroyArrow()
@@ -152,8 +151,8 @@ namespace MyGame
         }
 
         public void IsStaticTrue()
-        { 
-            isStatic = true; 
+        {
+            isStatic = true;
         }
 
 
@@ -162,7 +161,7 @@ namespace MyGame
             choseArrowImage = new ChoseArrowImage(transform, isStatic);
             arrowImage = choseArrowImage.GetImage();
         }
-       
+
     }
 
 }
