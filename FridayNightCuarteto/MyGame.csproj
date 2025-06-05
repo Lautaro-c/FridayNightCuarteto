@@ -135,13 +135,13 @@
     <Content Include="assets\AnimationArrow\left1.png" />
     <Content Include="assets\AnimationArrow\left2.png" />
     <Content Include="assets\AnimationArrow\left3.png" />
-    <Content Include="assets\AnimationArrow\left\2.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="assets\AnimationArrow\left\0.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="assets\AnimationArrow\left\1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\AnimationArrow\left\2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="assets\AnimationArrow\right1.png" />

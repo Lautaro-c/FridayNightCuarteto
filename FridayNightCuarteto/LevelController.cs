@@ -13,11 +13,6 @@ namespace MyGame
         private List<Arrows> arrowList = new List<Arrows>();
         private Image background = Engine.LoadImage("assets/Background.jpg");
         private Player player1;
-        private int leftArrowPos = 628;
-        private int downArrowPos = 728;
-        private int upArrowPos = 828;
-        private int rightArrowPos = 928;
-        private int arrowsYPos = 20;
         private int endLevelTime = 228;
         private int gamePointsToWin = 3050;
         private int initialPlayerPosition = 300;
