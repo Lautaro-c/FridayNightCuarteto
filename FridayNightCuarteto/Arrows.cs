@@ -8,10 +8,7 @@ using System.Threading.Tasks;
 
 namespace MyGame
 {
-
-    public class Arrows: GameObject<Arrows>, IAnimatable, IDestroyable
-
-
+    public class Arrows : GameObject<Arrows>, IAnimatable
     {
         private Image arrowImage;
         private ChoseArrowImage choseArrowImage;
@@ -141,15 +138,11 @@ namespace MyGame
         {
             renderer.Render(GetCurrentFrame(), transform);
         }
-        public void Destroy()
-        {
-            GameManager.Instance.LevelController.ArrowList.Remove(this);
-            InvokeOnDeactive(this);
-        }
 
         public void DestroyArrow()
         {
-            Destroy();
+            GameManager.Instance.LevelController.ArrowList.Remove(this);
+            InvokeOnDeactive(this);
         }
 
         public void IsStaticFalse()

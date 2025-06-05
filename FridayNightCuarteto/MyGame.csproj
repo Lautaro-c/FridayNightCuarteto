@@ -90,9 +90,8 @@
     <Compile Include="Engine\Image.cs" />
     <Compile Include="GameManager.cs" />
     <Compile Include="GameObject.cs" />
+    <Compile Include="HUD.cs" />
     <Compile Include="IAnimatable.cs" />
-    <Compile Include="IDestroyable.cs" />
-    <Compile Include="IInputReactive.cs" />
     <Compile Include="LevelController.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PlayerController.cs" />
@@ -109,6 +108,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="assets\arial.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="bin\Debug\MyGame.exe.config" />
     <None Include="packages.config" />
   </ItemGroup>
@@ -180,7 +182,7 @@
     <Content Include="assets\LeftArrowU.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="assets\Lose.jpg">
+    <Content Include="assets\Lose.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="assets\MainMenu.png">
@@ -237,7 +239,7 @@
     <Content Include="assets\UpArrowU.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="assets\Win.jpg">
+    <Content Include="assets\Win.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="bin\Debug\assets\bullet.png" />

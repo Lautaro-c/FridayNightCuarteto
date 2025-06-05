@@ -22,6 +22,7 @@ namespace MyGame
         private int gamePointsToWin = 3050;
         private int initialPlayerPosition = 300;
         private ArrowsFactory arrowsFactory = new ArrowsFactory();
+        private HUD hud = new HUD();
 
         public List<Arrows> ArrowList => arrowList;
         public Stopwatch Stopwatch => stopwatch;
@@ -601,6 +602,7 @@ namespace MyGame
             Engine.Clear();
             Engine.Draw(background, 0, 0);
             player1.Render();
+            hud.Render();
 
             for (int i = 0; i < arrowList.Count; i++)
             {

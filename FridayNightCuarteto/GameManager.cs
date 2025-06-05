@@ -16,8 +16,8 @@ namespace MyGame
         static private GameManager instance;
         private GameStage gameStage = GameStage.menu;
         private Image mainMenuScreen = Engine.LoadImage("assets/MainMenu.png");
-        private Image winScreen = Engine.LoadImage("assets/Win.jpg");
-        private Image loseScreen = Engine.LoadImage("assets/Lose.jpg");
+        private Image winScreen = Engine.LoadImage("assets/Win.png");
+        private Image loseScreen = Engine.LoadImage("assets/Lose.png");
         private LevelController levelController;
         private Points points;
         private bool songStarted = false;
