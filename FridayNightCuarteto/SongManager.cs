@@ -10,13 +10,19 @@ namespace MyGame
 {
     public class SongManager
     {
+        AudioFileReader reader = new AudioFileReader("assets/songs/Enamorado tuyo - El Cuarteto de Nos.mp3");
+        WaveOutEvent outputDevice = new WaveOutEvent();
 
         public void startSong()
         {
-            AudioFileReader reader = new AudioFileReader("assets/songs/Enamorado tuyo - El Cuarteto de Nos.mp3");
-            WaveOutEvent outputDevice = new WaveOutEvent();
             outputDevice.Init(reader);
             outputDevice.Play();
+        }
+
+        public void stopSong()
+        {
+            outputDevice.Stop();
+            reader.Position = 0;
         }
     }
 }

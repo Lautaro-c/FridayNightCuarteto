@@ -66,6 +66,7 @@ namespace MyGame
                     levelController.Update();
                     break;
                 case GameStage.win:
+                    SongManager.stopSong();
                     if (Engine.GetKey(Engine.KEY_ESC))
                     {
                         ChangeStage(GameStage.menu);
@@ -73,6 +74,7 @@ namespace MyGame
                     }
                     break;
                 case GameStage.lose:
+                    SongManager.stopSong();
                     if (Engine.GetKey(Engine.KEY_ESC))
                     {
                         ChangeStage(GameStage.menu);
