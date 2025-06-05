@@ -184,40 +184,40 @@
     <Content Include="assets\MainMenu.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="assets\Prota\0.gif">
+    <Content Include="assets\Prota\0.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="assets\Prota\1.gif">
+    <Content Include="assets\Prota\1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="assets\Prota\10.gif">
+    <Content Include="assets\Prota\10.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="assets\Prota\11.gif">
+    <Content Include="assets\Prota\11.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="assets\Prota\2.gif">
+    <Content Include="assets\Prota\2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="assets\Prota\3.gif">
+    <Content Include="assets\Prota\3.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="assets\Prota\4.gif">
+    <Content Include="assets\Prota\4.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="assets\Prota\5.gif">
+    <Content Include="assets\Prota\5.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="assets\Prota\6.gif">
+    <Content Include="assets\Prota\6.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="assets\Prota\7.gif">
+    <Content Include="assets\Prota\7.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="assets\Prota\8.gif">
+    <Content Include="assets\Prota\8.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="assets\Prota\9.gif">
+    <Content Include="assets\Prota\9.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="assets\RightArrow.png">

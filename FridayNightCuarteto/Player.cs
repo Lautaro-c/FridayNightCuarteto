@@ -32,7 +32,7 @@ namespace MyGame
 
             for (int i = 0; i < 11; i++)
             {
-                Image image = Engine.LoadImage($"assets/Prota/{i}.gif");
+                Image image = Engine.LoadImage($"assets/Prota/{i}.png");
                 images.Add(image);
             }
             animation = new Animation("Prota", true, 0.1f, images);
