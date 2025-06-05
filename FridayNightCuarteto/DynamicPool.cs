@@ -49,14 +49,13 @@ namespace MyGame
         {
             active.Remove(T);
             inactive.Add(T);
-            //Engine.Debug("Elimine una T");
             VerTDisponibles();
         }
 
         public void VerTDisponibles()
         {
-            //Engine.Debug("T disponibles: " + inactive.Count);
-            //Engine.Debug("T en uso: " + active.Count);
+            Engine.Debug("T disponibles: " + inactive.Count);
+            Engine.Debug("T en uso: " + active.Count);
         }
 
         private T CreateInstance()

@@ -16,7 +16,7 @@ namespace MyGame
         private const float arrowsYPos = 768;
         private const float staticArrowsYPos = 20;
 
-        ArrowsPool arrowPool = new ArrowsPool(250);
+        ArrowsPool arrowPool = new ArrowsPool();
         private List<(ArrowType arrowType, float spawnTime)> arrowQueue = new List<(ArrowType, float)>();
 
         public void Update()
@@ -35,31 +35,31 @@ namespace MyGame
             {
                 if (GameManager.Instance.LevelController.Stopwatch.Elapsed.TotalSeconds >= arrowQueue[i].spawnTime)
                 {
-                    SpawnArrows(arrowQueue[i].arrowType, 0f);
+                    SpawnArrows(arrowQueue[i].arrowType);
                     arrowQueue.RemoveAt(i);
                 }
             }
         }
 
 
-        public void SpawnArrows(ArrowType arrowType, float time)
+        public void SpawnArrows(ArrowType arrowType)
         {
             switch (arrowType)
             {
                 case ArrowType.leftArrow:
-                    Arrows arrow = arrowPool.GetArrow(leftArrowPos, arrowsYPos, false, time);
+                    Arrows arrow = arrowPool.GetArrow(leftArrowPos, arrowsYPos, false);
                     GameManager.Instance.LevelController.ArrowList.Add(arrow);
                     break;
                 case ArrowType.rightArrow:
-                    Arrows arrow2 = arrowPool.GetArrow(rightArrowPos, arrowsYPos, false, time);
+                    Arrows arrow2 = arrowPool.GetArrow(rightArrowPos, arrowsYPos, false);
                     GameManager.Instance.LevelController.ArrowList.Add(arrow2);
                     break;
                 case ArrowType.upArrow:
-                    Arrows arrow3 = arrowPool.GetArrow(upArrowPos, arrowsYPos, false, time);
+                    Arrows arrow3 = arrowPool.GetArrow(upArrowPos, arrowsYPos, false);
                     GameManager.Instance.LevelController.ArrowList.Add(arrow3);
                     break;
                 case ArrowType.downArrow:
-                    Arrows arrow4 = arrowPool.GetArrow(downArrowPos, arrowsYPos, false, time);
+                    Arrows arrow4 = arrowPool.GetArrow(downArrowPos, arrowsYPos, false);
                     GameManager.Instance.LevelController.ArrowList.Add(arrow4);
                     break;
 
@@ -71,16 +71,16 @@ namespace MyGame
             switch (arrowType)
             {
                 case ArrowType.leftArrowS:
-                    return new Arrows(leftArrowPos, staticArrowsYPos, true, time);
+                    return new Arrows(leftArrowPos, staticArrowsYPos, true);
                     break;
                 case ArrowType.rightArrowS:
-                    return new Arrows(rightArrowPos, staticArrowsYPos, true, time);
+                    return new Arrows(rightArrowPos, staticArrowsYPos, true);
                     break;
                 case ArrowType.upArrowS:
-                    return new Arrows(upArrowPos, staticArrowsYPos, true, time);
+                    return new Arrows(upArrowPos, staticArrowsYPos, true);
                     break;
                 case ArrowType.downArrowS:
-                    return new Arrows(downArrowPos, staticArrowsYPos, true, time);
+                    return new Arrows(downArrowPos, staticArrowsYPos, true);
                     break;
             }
             return null;

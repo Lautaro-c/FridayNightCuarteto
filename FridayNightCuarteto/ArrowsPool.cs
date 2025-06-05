@@ -9,16 +9,13 @@ namespace MyGame
     
     public class ArrowsPool : DynamicPool<Arrows>
     {
-        private ChoseArrowImage choseArrowImage;
-        public ArrowsPool(float defaultSpawnTime)
-       : base(typeof(Arrows), 0f, 0f, false, defaultSpawnTime)
-        {
-        }
-        public Arrows GetArrow(float x, float y, bool isStatic, float spawnTime)
+        public ArrowsPool()
+       : base(typeof(Arrows), 0f, 0f, false)
+        {}
+        public Arrows GetArrow(float x, float y, bool isStatic)
         {   
             Arrows arrow = GetT();
             arrow.Transform.SetPosition(new Vector2(x, y));
-            arrow.SpawnTime = spawnTime;
             if (!isStatic)
             {
                 arrow.IsStaticFalse();

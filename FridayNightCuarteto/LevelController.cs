@@ -18,10 +18,12 @@ namespace MyGame
         private int initialPlayerPosition = 300;
         private ArrowsFactory arrowsFactory = new ArrowsFactory();
         private HUD hud = new HUD();
+        private TriggerArrowAnimation triggerArrowAnimation = new TriggerArrowAnimation();
 
         public List<Arrows> ArrowList => arrowList;
         public Stopwatch Stopwatch => stopwatch;
         public Player Player1 => player1;
+        public TriggerArrowAnimation TriggerArrowAnimation => triggerArrowAnimation;
 
         public void InitializeLevel()
         {
@@ -544,35 +546,6 @@ namespace MyGame
             Right,
             Up,
             Down
-        }
-
-        public void TriggerArrowAnimation(ArrowDirection direction)
-        {
-            float targetX = 0;
-
-            switch (direction)
-            {
-                case ArrowDirection.Left:
-                    targetX = 628;
-                    break;
-                case ArrowDirection.Down:
-                    targetX = 728;
-                    break;
-                case ArrowDirection.Up:
-                    targetX = 828;
-                    break;
-                case ArrowDirection.Right:
-                    targetX = 928;
-                    break;
-            }
-
-            foreach (var arrow in arrowList)
-            {
-                if (arrow.IsStatic() && Math.Abs(arrow.PositionX - targetX) < 1f)
-                {
-                    arrow.PlayAnimation();
-                }
-            }
         }
 
         public void Update()

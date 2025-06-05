@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 namespace MyGame
 {
     public interface IAnimatable
-    {
-        void CreateAnimation();         
+    {       
         void UpdateAnimation();
         Image GetCurrentFrame();
     }

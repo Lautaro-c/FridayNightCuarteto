@@ -106,6 +106,7 @@
     <Compile Include="SongManager.cs" />
     <Compile Include="Time.cs" />
     <Compile Include="Transform.cs" />
+    <Compile Include="TriggerArrowAnimation.cs" />
     <Compile Include="Vector2.cs" />
   </ItemGroup>
   <ItemGroup>

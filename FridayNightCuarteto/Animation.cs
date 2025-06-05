@@ -30,7 +30,6 @@ namespace MyGame
         {
             actualTime += Time.DeltaTime;
            
-
             if (actualTime > speed) 
             {
                 actualTime = 0;

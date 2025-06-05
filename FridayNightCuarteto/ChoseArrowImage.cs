@@ -25,7 +25,7 @@ namespace MyGame
         private const float downArrowPos = 728;
         private const float upArrowPos = 828;
         private const float rightArrowPos = 928;
-        //private Animation animation;
+
         public ChoseArrowImage(Transform transform, bool isStatic) 
         {
             this.transform = transform;

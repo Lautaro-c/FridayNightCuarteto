@@ -13,37 +13,23 @@ namespace MyGame
         private Image arrowImage;
         private ChoseArrowImage choseArrowImage;
         private Animation animation;
-
-        private bool isPlayingAnimation = false;
         private ArrowMovement arrowMovement;
-
+        private bool isPlayingAnimation = false;
         private bool canMove = false;
         private bool isStatic = false;
         private static float sizeValue = 76;
         private int screenLimit = 152;
-        private float spawnTime;
-        private float maxTime = 300;
 
         public Image ArrowImage => arrowImage;
         public bool IsStatic() => isStatic;
         public float PositionX => transform.Pos.x;
-        public float SpawnTime
-        {
-            set
-            {
-                if (value < maxTime)
-                {
-                    spawnTime = value;
-                }
-            }
-        }
 
-        public Arrows(float positionX, float positionY, bool isStatic, float spawnTime)
+
+        public Arrows(float positionX, float positionY, bool isStatic)
             : base(positionX, positionY, sizeValue, sizeValue, 0f, 0f)
         {
             arrowMovement = new ArrowMovement(transform);
             this.isStatic = isStatic;
-            this.spawnTime = spawnTime;
             choseArrowImage = new ChoseArrowImage(transform, isStatic);
             arrowImage = choseArrowImage.GetImage();
             renderer = new Renderer();
@@ -71,11 +57,6 @@ namespace MyGame
         public Image GetCurrentFrame()
         {
             return arrowImage;
-        }
-
-        public void CreateAnimation()
-        {
-
         }
 
         public void PlayAnimation()
@@ -129,7 +110,7 @@ namespace MyGame
 
             if (transform.Pos.y <= -screenLimit)
             {
-                DestroyArrow();
+                Destroy();
             }
             UpdateAnimation();
         }
@@ -142,10 +123,6 @@ namespace MyGame
         {
             GameManager.Instance.LevelController.ArrowList.Remove(this);
             InvokeOnDeactive(this);
-        }
-        public void DestroyArrow()
-        {
-            Destroy();
         }
 
         public void IsStaticFalse()
