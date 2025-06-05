@@ -91,6 +91,8 @@
     <Compile Include="GameManager.cs" />
     <Compile Include="GameObject.cs" />
     <Compile Include="IAnimatable.cs" />
+    <Compile Include="IDestroyable.cs" />
+    <Compile Include="IInputReactive.cs" />
     <Compile Include="LevelController.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PlayerController.cs" />

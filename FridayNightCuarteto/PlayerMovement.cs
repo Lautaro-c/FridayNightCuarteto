@@ -5,24 +5,45 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace MyGame
 {
-    public class PlayerMovement 
+    public class PlayerMovement
     {
         private Transform transform;
         private int rightLimit = 500;
         private int downLimit = 600;
 
         public PlayerMovement(Transform transform)
-        { 
-            this.transform = transform; 
+        {
+            this.transform = transform;
         }
 
         public void MovePlayer(float directionX, float directionY)
         {
-            if (transform.Pos.x + directionX >= 0 && transform.Pos.y + directionY >= 0 && transform.Pos.x + directionX <= rightLimit && transform.Pos.y + directionY <= downLimit)
+            if (transform.Pos.x + directionX >= 0 && transform.Pos.y + directionY >= 0 &&
+                transform.Pos.x + directionX <= rightLimit && transform.Pos.y + directionY <= downLimit)
             {
                 GameManager.Instance.LevelController.Player1.Transform.Translate(directionX, directionY);
+            }
+        }
+
+        public void OnInputReceived(LevelController.ArrowDirection direction)
+        {
+            switch (direction)
+            {
+                case LevelController.ArrowDirection.Left:
+                    MovePlayer(-100, 0);
+                    break;
+                case LevelController.ArrowDirection.Right:
+                    MovePlayer(100, 0);
+                    break;
+                case LevelController.ArrowDirection.Up:
+                    MovePlayer(0, -100);
+                    break;
+                case LevelController.ArrowDirection.Down:
+                    MovePlayer(0, 100);
+                    break;
             }
         }
     }
