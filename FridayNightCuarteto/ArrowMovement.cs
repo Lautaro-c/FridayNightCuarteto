@@ -9,7 +9,7 @@ namespace MyGame
     public class ArrowMovement 
     {
         private Transform transform;
-        private float speed = -4;
+        private float speed = -2;
 
         public ArrowMovement(Transform transform)
         {
