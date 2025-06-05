@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace MyGame
 
 {
-    public class Player : GameObject <Player>, IAnimatable
+    public class Player : GameObject <Player>, IAnimatable, IInput
     {
         private Animation animation;
         private PlayerController playerControl;
@@ -57,6 +57,11 @@ namespace MyGame
         public override void Render()
         {
             renderer.Render(GetCurrentFrame(), transform);
+        }
+
+           public void OnInputReceived(LevelController.ArrowDirection direction)
+        {
+            playerMovement.OnInputReceived(direction);
         }
     }
 }
