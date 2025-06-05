@@ -25,5 +25,24 @@ namespace MyGame
                 GameManager.Instance.LevelController.Player1.Transform.Translate(directionX, directionY);
             }
         }
+
+        public void OnInputReceived(LevelController.ArrowDirection direction)
+        {
+            switch (direction)
+            {
+                case LevelController.ArrowDirection.Left:
+                    MovePlayer(-100, 0);
+                    break;
+                case LevelController.ArrowDirection.Right:
+                    MovePlayer(100, 0);
+                    break;
+                case LevelController.ArrowDirection.Up:
+                    MovePlayer(0, -100);
+                    break;
+                case LevelController.ArrowDirection.Down:
+                    MovePlayer(0, 100);
+                    break;
+            }
+        }
     }
 }
