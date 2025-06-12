@@ -18,9 +18,13 @@ namespace MyGame
             GameManager.Instance.Initialize();
 
             Time.Initialize();
-       
-            while (true)
+            bool running = true;
+            while (running)
             {
+                if (Engine.GetKey(Engine.KEY_ESC))
+                {
+                    running = false;
+                }
                 Time.Update();
                 GameManager.Instance.Update();
                 GameManager.Instance.Render();
