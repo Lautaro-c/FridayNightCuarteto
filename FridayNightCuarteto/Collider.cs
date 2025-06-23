@@ -1,128 +1,36 @@
 ﻿using System;
+using System.CodeDom;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace MyGame
 {
     public class Collider
     {
-        static private List<Arrows> arrowList;
-        static private List<Arrows> leftArrowList = new List<Arrows>();
-        private List<Arrows> rightArrowList = new List<Arrows>();
-        private List<Arrows> upArrowList = new List<Arrows>();
-        private List<Arrows> downArrowList = new List<Arrows>();
-        private int leftArrowPos = 628;
-        private int downArrowPos = 728;
-        private int upArrowPos = 828;
-        private int rightArrowPos = 928;
-        private float arrowsYPos = 20;
-        private float arrowsHeight = 76;
-        private int givenPoints = 10;
+        public Collider() 
+        { }
 
-        public Collider()
+        public bool BoxCollider(Transform transform1, Transform transform2)
         {
-            arrowList = GameManager.Instance.LevelController.ArrowList;
-            GetArrows();
-        }
+            float distanceX = Math.Abs((transform1.Pos.x + transform1.Scale.x / 2) - (transform2.Pos.x + transform2.Scale.x / 2));
+            float distanceY = Math.Abs((transform1.Pos.y + transform1.Scale.y / 2) - (transform2.Pos.y + transform2.Scale.y / 2));
 
-        public void Update()
-        {
-            arrowList = GameManager.Instance.LevelController.ArrowList;
-            GetArrows();
-        }
+            float sumHalfWidths = transform1.Scale.x / 2 + transform2.Scale.x / 2;
+            float sumHalfHeight = transform1.Scale.y / 2 + transform2.Scale.y / 2;
 
-        public void GetLeftCollition()
-        {
-            for (int i = 0; i < leftArrowList.Count; i++)
+            if (distanceX < sumHalfWidths && distanceY < sumHalfHeight)
             {
-                float distanceY = Math.Abs(arrowsYPos + arrowsHeight / 2 - leftArrowList[i].Transform.Pos.y - leftArrowList[i].Transform.Scale.y / 2);
-                float sumHalfHeights = arrowsHeight / 2 + leftArrowList[i].Transform.Scale.y / 2;
-                if (distanceY <= sumHalfHeights)
-                {
-                    GameManager.Instance.Points.RythmPoints = givenPoints;
-                    leftArrowList[i].Destroy();
-                    break;
-                }
-            }
-        }
-
-        public void GetUpCollition()
-        {
-            for (int i = 0; i < upArrowList.Count; i++)
+                return true;
+            } else
             {
-                float distanceY = Math.Abs(arrowsYPos + arrowsHeight / 2 - upArrowList[i].Transform.Pos.y - upArrowList[i].Transform.Scale.y / 2);
-                float sumHalfHeights = arrowsHeight / 2 + upArrowList[i].Transform.Scale.y / 2;
-                if (distanceY <= sumHalfHeights)
-                {
-                    GameManager.Instance.Points.RythmPoints = givenPoints;
-                    upArrowList[i].Destroy();
-                    break;
-                }
+                return false;
             }
-        }
 
-        public void GetDownCollition()
-        {
-            for (int i = 0; i < downArrowList.Count; i++)
-            {
-                float distanceY = Math.Abs(arrowsYPos + arrowsHeight / 2 - downArrowList[i].Transform.Pos.y - downArrowList[i].Transform.Scale.y / 2);
-                float sumHalfHeights = arrowsHeight / 2 + downArrowList[i].Transform.Scale.y / 2;
-                if (distanceY <= sumHalfHeights)
-                {
-                    GameManager.Instance.Points.RythmPoints = givenPoints;
-                    downArrowList[i].Destroy();
-                    break;
-                }
-            }
-        }
-
-        public void GetRightCollition()
-        {
-            for (int i = 0; i < rightArrowList.Count; i++)
-            {
-                float distanceY = Math.Abs(arrowsYPos + arrowsHeight / 2 - rightArrowList[i].Transform.Pos.y - rightArrowList[i].Transform.Scale.y / 2);
-                float sumHalfHeights = arrowsHeight / 2 + rightArrowList[i].Transform.Scale.y / 2;
-                if (distanceY <= sumHalfHeights)
-                {
-                    GameManager.Instance.Points.RythmPoints = givenPoints;
-                    rightArrowList[i].Destroy();
-                    break;
-                }
-            }
-        }
-
-        private void GetArrows()
-        {
-            rightArrowList.Clear();
-            leftArrowList.Clear();
-            downArrowList.Clear();
-            upArrowList.Clear();
-
-            for (int i = 0; i < arrowList.Count; i++)
-            {
-                if (arrowList[i].Transform.Pos.y != arrowsYPos && arrowList[i].Transform.Pos.x == rightArrowPos)
-                {
-                    rightArrowList.Add(arrowList[i]);
-                }
-
-                if (arrowList[i].Transform.Pos.y != arrowsYPos && arrowList[i].Transform.Pos.x == leftArrowPos)
-                {
-                    leftArrowList.Add(arrowList[i]);
-                }
-
-                if (arrowList[i].Transform.Pos.y != arrowsYPos && arrowList[i].Transform.Pos.x == downArrowPos)
-                {
-                    downArrowList.Add(arrowList[i]);
-                }
-
-                if (arrowList[i].Transform.Pos.y != arrowsYPos && arrowList[i].Transform.Pos.x == upArrowPos)
-                {
-                    upArrowList.Add(arrowList[i]);
-                }
-            }
         }
     }
 }
