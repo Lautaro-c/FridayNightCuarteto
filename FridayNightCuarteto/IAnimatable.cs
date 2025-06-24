@@ -8,7 +8,6 @@ namespace MyGame
 {
     public interface IAnimatable
     {       
-        void UpdateAnimation();
         Image GetCurrentFrame();
     }
 }

@@ -38,11 +38,6 @@ namespace MyGame
             animation = new Animation("Prota", true, 0.1f, images);
         }
 
-        public void UpdateAnimation()
-        {
-            animation?.Update();
-        }
-
         public Image GetCurrentFrame()
         {
             return animation?.CurrentImage;
@@ -51,7 +46,7 @@ namespace MyGame
         public override void Update()
         {
             playerControl.Update();
-            UpdateAnimation(); 
+            animation?.Update();
         }
 
         public override void Render()

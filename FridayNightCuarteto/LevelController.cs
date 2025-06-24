@@ -13,6 +13,7 @@ namespace MyGame
         private List<Arrows> arrowList = new List<Arrows>();
         private Image background = Engine.LoadImage("assets/Background.jpg");
         private Player player1;
+        private GetReadySign getReadySign;
         private int endLevelTime = 228;
         private int gamePointsToWin = 3050;
         private int initialPlayerPosition = 300;
@@ -517,6 +518,7 @@ namespace MyGame
             arrowsFactory.AddArrowToQueue(ArrowType.rightArrow, 216.35f);
 
             player1 = new Player(initialPlayerPosition, initialPlayerPosition);
+            getReadySign = new GetReadySign();
             stopwatch.Start();
         }
 
@@ -551,6 +553,7 @@ namespace MyGame
         public void Update()
         {
             player1.Update();
+            getReadySign.Update();
             arrowsFactory.Update();
 
             for (int i = 0; i < arrowList.Count; i++)
@@ -565,6 +568,7 @@ namespace MyGame
             Engine.Clear();
             Engine.Draw(background, 0, 0);
             player1.Render();
+            getReadySign.Render();
             hud.Render();
 
             for (int i = 0; i < arrowList.Count; i++)
