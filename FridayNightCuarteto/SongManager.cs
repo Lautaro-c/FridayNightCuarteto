@@ -10,19 +10,36 @@ namespace MyGame
 {
     public class SongManager
     {
-        AudioFileReader reader = new AudioFileReader("assets/songs/Enamorado tuyo - El Cuarteto de Nos.mp3");
+        AudioFileReader reader1 = new AudioFileReader("assets/songs/Enamorado tuyo - El Cuarteto de Nos.mp3");
+        AudioFileReader reader2 = new AudioFileReader("assets/songs/Enamorado tuyo - El Cuarteto de Nos.mp3");
         WaveOutEvent outputDevice = new WaveOutEvent();
 
-        public void startSong()
+        public void startSong(int songNumber)
         {
-            outputDevice.Init(reader);
-            outputDevice.Play();
+            if (songNumber == 1)
+            {
+                outputDevice.Init(reader1);
+                outputDevice.Play();
+            }
+            if (songNumber == 2)
+            {
+                outputDevice.Init(reader2);
+                outputDevice.Play();
+            }
         }
 
-        public void stopSong()
+        public void stopSong(int songNumber)
         {
-            outputDevice.Stop();
-            reader.Position = 0;
+            if (songNumber == 1)
+            {
+                outputDevice.Stop();
+                reader1.Position = 0;
+            }
+            if (songNumber == 2)
+            {
+                outputDevice.Stop();
+                reader2.Position = 0;
+            }
         }
     }
 }

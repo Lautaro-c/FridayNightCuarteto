@@ -54,8 +54,8 @@ namespace MyGame
 
         public void VerTDisponibles()
         {
-            Engine.Debug("T disponibles: " + inactive.Count);
-            Engine.Debug("T en uso: " + active.Count);
+            //Engine.Debug("T disponibles: " + inactive.Count);
+            //Engine.Debug("T en uso: " + active.Count);
         }
 
         private T CreateInstance()

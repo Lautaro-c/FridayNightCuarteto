@@ -9,7 +9,7 @@ namespace MyGame
 {
     public enum GameStage
     {
-        menu, game, win, lose
+        menu, game, win, lose, nextLevel
     }
     public class GameManager
     {
@@ -18,14 +18,16 @@ namespace MyGame
         private Image mainMenuScreen = Engine.LoadImage("assets/MainMenu.png");
         private Image winScreen = Engine.LoadImage("assets/Win.png");
         private Image loseScreen = Engine.LoadImage("assets/Lose.png");
+        private Image nextLevelScreen = Engine.LoadImage("assets/NextLevel.png");
         private LevelController levelController;
         private Points points;
         private bool songStarted = false;
+        private int level = 1;
         public LevelController LevelController => levelController;
         public Points Points => points;
         
 
-        public SongManager SongManager; 
+        private SongManager SongManager; 
         static public GameManager Instance
         {
             get
@@ -43,7 +45,7 @@ namespace MyGame
         {
             levelController = new LevelController();
             points = new Points();
-            levelController.InitializeLevel();
+            //levelController.InitializeLevel(1);
             SongManager = new SongManager();
         }
 
@@ -54,28 +56,45 @@ namespace MyGame
                 case GameStage.menu:
                     if (Engine.GetKey(Engine.KEY_ESP))
                     {
+                        level = 1;
+                        levelController.InitializeLevel(level);
                         ChangeStage(GameStage.game);
                     }
                     break;
                 case GameStage.game:
                     if (!songStarted)
                     {
-                        SongManager.startSong();
+                        SongManager.startSong(level);
                         songStarted = true;
                     }
                     levelController.Update();
                     break;
                 case GameStage.win:
-                    SongManager.stopSong();
-                    if (Engine.GetKey(Engine.KEY_ESC))
+                    SongManager.stopSong(level);
+                    if (Engine.GetKey(Engine.KEY_M))
+                    {
+                        ChangeStage(GameStage.menu);
+                        songStarted = false;
+                    }
+                    break;
+                case GameStage.nextLevel:
+                    SongManager.stopSong(level);
+                    if (Engine.GetKey(Engine.KEY_ESP))
+                    {
+                        level = 2;
+                        ChangeStage(GameStage.game);
+                        levelController.InitializeLevel(level);
+                        songStarted = false;
+                    }
+                    if (Engine.GetKey(Engine.KEY_M))
                     {
                         ChangeStage(GameStage.menu);
                         songStarted = false;
                     }
                     break;
                 case GameStage.lose:
-                    SongManager.stopSong();
-                    if (Engine.GetKey(Engine.KEY_ESC))
+                    SongManager.stopSong(level);
+                    if (Engine.GetKey(Engine.KEY_M))
                     {
                         ChangeStage(GameStage.menu);
                         songStarted = false;
@@ -104,6 +123,11 @@ namespace MyGame
                 case GameStage.lose:
                     Engine.Clear();
                     Engine.Draw(loseScreen, 0, 0);
+                    Engine.Show();
+                    break;
+                case GameStage.nextLevel:
+                    Engine.Clear();
+                    Engine.Draw(nextLevelScreen, 0, 0);
                     Engine.Show();
                     break;
             }

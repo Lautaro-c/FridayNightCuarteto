@@ -22,7 +22,7 @@ namespace MyGame
                 if (value < masPointsRecieved)
                 {
                     rythmPoints += value;
-                    Engine.Debug($"{rythmPoints}");
+                    //Engine.Debug($"{rythmPoints}");
                 }
             }
         }

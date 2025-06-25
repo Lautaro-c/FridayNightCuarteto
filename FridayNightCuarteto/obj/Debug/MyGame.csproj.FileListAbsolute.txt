@@ -422,3 +422,5 @@ C:\Users\lauli\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuartet
 C:\Users\lauli\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\assets\WASDFrames\7.png
 C:\Users\lauli\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\assets\WASDFrames\8.png
 C:\Users\lauli\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\assets\WASDFrames\9.png
+C:\Users\lauli\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\assets\NextLevel.png
+C:\Users\lauli\OneDrive\Documentos\GitHub\FridayNightCuarteto\FridayNightCuarteto\bin\Debug\assets\Background2.jpg
