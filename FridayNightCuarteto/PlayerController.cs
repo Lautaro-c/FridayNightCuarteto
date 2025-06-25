@@ -30,7 +30,7 @@ namespace MyGame
             {
                 if((DateTime.Now - lastTimeLeftArrow).TotalSeconds >= 0.25)
                 {
-                    //Engine.Debug($"arrowList.Add(ArrowsFactory.CreateArrows(ArrowType.leftArrow, {GameManager.Instance.LevelController.Stopwatch.Elapsed.TotalSeconds:F2}f));");
+                    Engine.Debug($"arrowList.Add(ArrowsFactory.CreateArrows(ArrowType.leftArrow, {GameManager.Instance.LevelController.Stopwatch.Elapsed.TotalSeconds:F2}f));");
                     arrowsCollider.GetLeftCollition();
                     lastTimeLeftArrow = DateTime.Now;
                     GameManager.Instance.LevelController.Player1.PlayerMovement.MovePlayer(-speed, 0);
@@ -42,7 +42,7 @@ namespace MyGame
             {
                 if ((DateTime.Now - lastTimeRightArrow).TotalSeconds >= 0.25)
                 {
-                    //Engine.Debug($"arrowList.Add(ArrowsFactory.CreateArrows(ArrowType.rightArrow, {GameManager.Instance.LevelController.Stopwatch.Elapsed.TotalSeconds:F2}f));");
+                    Engine.Debug($"arrowList.Add(ArrowsFactory.CreateArrows(ArrowType.rightArrow, {GameManager.Instance.LevelController.Stopwatch.Elapsed.TotalSeconds:F2}f));");
                     arrowsCollider.GetRightCollition();
                     lastTimeRightArrow = DateTime.Now;
                     GameManager.Instance.LevelController.Player1.PlayerMovement.MovePlayer(speed, 0);
@@ -54,7 +54,7 @@ namespace MyGame
             {
                 if ((DateTime.Now - lastTimeUpArrow).TotalSeconds >= 0.25)
                 {
-                    //Engine.Debug($"arrowList.Add(ArrowsFactory.CreateArrows(ArrowType.upArrow, {GameManager.Instance.LevelController.Stopwatch.Elapsed.TotalSeconds:F2}f));");
+                    Engine.Debug($"arrowList.Add(ArrowsFactory.CreateArrows(ArrowType.upArrow, {GameManager.Instance.LevelController.Stopwatch.Elapsed.TotalSeconds:F2}f));");
                     arrowsCollider.GetUpCollition();
                     lastTimeUpArrow = DateTime.Now;
                     GameManager.Instance.LevelController.Player1.PlayerMovement.MovePlayer(0, -speed);
@@ -66,7 +66,7 @@ namespace MyGame
             {
                 if ((DateTime.Now - lastTimeDownArrow).TotalSeconds >= 0.25)
                 {
-                    //Engine.Debug($"arrowList.Add(ArrowsFactory.CreateArrows(ArrowType.downArrow, {GameManager.Instance.LevelController.Stopwatch.Elapsed.TotalSeconds:F2}f));");
+                    Engine.Debug($"arrowList.Add(ArrowsFactory.CreateArrows(ArrowType.downArrow, {GameManager.Instance.LevelController.Stopwatch.Elapsed.TotalSeconds:F2}f));");
                     arrowsCollider.GetDownCollition();
                     lastTimeDownArrow = DateTime.Now;
                     GameManager.Instance.LevelController.Player1.PlayerMovement.MovePlayer(0, speed);

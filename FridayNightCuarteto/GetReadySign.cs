@@ -13,7 +13,7 @@ namespace MyGame
         private static int sizeValueX = 187;
         private static int sizeValueY = 138;
         private float animationDelay = 0.5f;
-        private float destroyTime = 19f;
+        private float destroyTime = 11f;
         private Animation animation;
         private bool ArrowIsActive;
         public GetReadySign() : base(positionX, positionY, sizeValueX, sizeValueY, 0f, 0f)
