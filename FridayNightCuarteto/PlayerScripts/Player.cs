@@ -54,7 +54,7 @@ namespace MyGame
             renderer.Render(GetCurrentFrame(), transform);
         }
 
-           public void OnInputReceived(LevelController.ArrowDirection direction)
+        public void OnInputReceived(LevelController.ArrowDirection direction)
         {
             playerMovement.OnInputReceived(direction);
         }

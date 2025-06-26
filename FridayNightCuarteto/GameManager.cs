@@ -23,11 +23,10 @@ namespace MyGame
         private Points points;
         private bool songStarted = false;
         private int level = 1;
+        private SongManager SongManager;
         public LevelController LevelController => levelController;
         public Points Points => points;
         
-
-        private SongManager SongManager; 
         static public GameManager Instance
         {
             get
@@ -45,7 +44,6 @@ namespace MyGame
         {
             levelController = new LevelController();
             points = new Points();
-            //levelController.InitializeLevel(1);
             SongManager = new SongManager();
         }
 

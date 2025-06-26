@@ -16,7 +16,7 @@ namespace MyGame
         {
             drawingImage = image;
             this.transform = transform;
-            Engine.Draw(drawingImage, transform.Pos.x, transform.Pos.y, transform.Scale.x, transform.Scale.y);
+            Engine.Draw(drawingImage, this.transform.Pos.x, this.transform.Pos.y, this.transform.Scale.x, this.transform.Scale.y);
         }
     }
 }

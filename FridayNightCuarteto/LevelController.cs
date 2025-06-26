@@ -36,10 +36,10 @@ namespace MyGame
             this.level = level;
             if (level == 1)
             {
-                arrowList.Add(ArrowsFactory.CreateArrows(ArrowType.rightArrowS, 0f));
-                arrowList.Add(ArrowsFactory.CreateArrows(ArrowType.upArrowS, 0f));
-                arrowList.Add(ArrowsFactory.CreateArrows(ArrowType.downArrowS, 0f));
-                arrowList.Add(ArrowsFactory.CreateArrows(ArrowType.leftArrowS, 0f));
+                arrowList.Add(ArrowsCreator.CreateArrows(ArrowType.rightArrowS, 0f));
+                arrowList.Add(ArrowsCreator.CreateArrows(ArrowType.upArrowS, 0f));
+                arrowList.Add(ArrowsCreator.CreateArrows(ArrowType.downArrowS, 0f));
+                arrowList.Add(ArrowsCreator.CreateArrows(ArrowType.leftArrowS, 0f));
                 arrowsFactory.AddArrowToQueue(ArrowType.leftArrow, 12.84f);
                 arrowsFactory.AddArrowToQueue(ArrowType.rightArrow, 13.05f);
                 arrowsFactory.AddArrowToQueue(ArrowType.upArrow, 13.35f);
@@ -1008,25 +1008,6 @@ namespace MyGame
                     {
                         GameManager.Instance.Points.RythmPoints = -GameManager.Instance.Points.RythmPoints;
                         GameManager.Instance.ChangeStage(GameStage.nextLevel);
-                    }
-                    else
-                    {
-                        GameManager.Instance.Points.RythmPoints = -GameManager.Instance.Points.RythmPoints;
-                        GameManager.Instance.ChangeStage(GameStage.lose);
-                    }
-                }
-            }
-            if (level == 1)
-            {
-                if (stopwatch.Elapsed.TotalSeconds >= endLevel1Time)
-                {
-                    stopwatch.Restart();
-                    stopwatch.Stop();
-
-                    if (GameManager.Instance.Points.RythmPoints >= gamePointsToWin1)
-                    {
-                        GameManager.Instance.Points.RythmPoints = -GameManager.Instance.Points.RythmPoints;
-                        GameManager.Instance.ChangeStage(GameStage.win);
                     }
                     else
                     {

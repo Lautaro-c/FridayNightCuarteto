@@ -11,15 +11,10 @@ namespace MyGame
     {
         private List<T> active = new List<T>();
         private List<T> inactive = new List<T>();
-
-        //almacena los datos usados para crear el pool
-        //object puede guardar cualquier tipo de dato
         private object[] constructorParams;
-
-        //params permite que varios tipos de variables sin tener que definirlos previamente como un array
         public DynamicPool(Type type, params object[] parameters)
         {
-            constructorParams = parameters; // Guarda los parámetros para futuras instancias
+            constructorParams = parameters; 
         }
         public List<T> Active => active;
         public List<T> Inactive => inactive;
@@ -40,7 +35,6 @@ namespace MyGame
                 newT.OnDeactive += RecycleT;
             }
             active.Add(newT);
-            VerTDisponibles();
             return newT;
 
         }
@@ -49,18 +43,10 @@ namespace MyGame
         {
             active.Remove(T);
             inactive.Add(T);
-            VerTDisponibles();
-        }
-
-        public void VerTDisponibles()
-        {
-            //Engine.Debug("T disponibles: " + inactive.Count);
-            //Engine.Debug("T en uso: " + active.Count);
         }
 
         private T CreateInstance()
         {
-            //Instancia objetos de una clase con los parametros que guardo
             return (T)Activator.CreateInstance(typeof(T), constructorParams);
         }
     }

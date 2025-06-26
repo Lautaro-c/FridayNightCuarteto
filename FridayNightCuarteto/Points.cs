@@ -10,7 +10,7 @@ namespace MyGame
     public class Points
     {
         private int rythmPoints;
-        private int masPointsRecieved = 20;
+        private int maxPointsRecieved = 20;
         public int RythmPoints
         { 
             get 
@@ -19,10 +19,9 @@ namespace MyGame
             }
             set 
             {
-                if (value < masPointsRecieved)
+                if (value < maxPointsRecieved)
                 {
                     rythmPoints += value;
-                    //Engine.Debug($"{rythmPoints}");
                 }
             }
         }

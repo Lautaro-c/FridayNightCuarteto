@@ -9,8 +9,7 @@ namespace MyGame
     
     public class ArrowsPool : DynamicPool<Arrows>
     {
-        public ArrowsPool()
-       : base(typeof(Arrows), 0f, 0f, false)
+        public ArrowsPool(): base(typeof(Arrows), 0f, 0f, false)
         {}
         public Arrows GetArrow(float x, float y, bool isStatic)
         {   
@@ -26,7 +25,5 @@ namespace MyGame
             arrow.ChooseImage();
             return arrow;
         }
-
-
     }
 }

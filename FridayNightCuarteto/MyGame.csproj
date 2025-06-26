@@ -78,14 +78,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animation.cs" />
-    <Compile Include="ArrowMovement.cs" />
-    <Compile Include="Arrows.cs" />
-    <Compile Include="ArrowsAnimation.cs" />
-    <Compile Include="ArrowsFactory.cs" />
+    <Compile Include="ArrowsScripts\ArrowMovement.cs" />
+    <Compile Include="ArrowsScripts\Arrows.cs" />
+    <Compile Include="ArrowsScripts\ArrowsCreator.cs" />
+    <Compile Include="ArrowsScripts\ArrowsFactory.cs" />
     <Compile Include="GetReadySign.cs" />
-    <Compile Include="ArrowsPool.cs" />
-    <Compile Include="ChoseArrowImage.cs" />
-    <Compile Include="ArrowsCollider.cs" />
+    <Compile Include="ArrowsScripts\ArrowsPool.cs" />
+    <Compile Include="ArrowsScripts\ChoseArrowImage.cs" />
+    <Compile Include="ArrowsScripts\ArrowsCollider.cs" />
     <Compile Include="Collider.cs" />
     <Compile Include="DynamicPool.cs" />
     <Compile Include="Engine\Font.cs" />
@@ -94,13 +94,13 @@
     <Compile Include="GameManager.cs" />
     <Compile Include="GameObject.cs" />
     <Compile Include="HUD.cs" />
-    <Compile Include="IAnimatable.cs" />
-    <Compile Include="IDestroyable.cs" />
-    <Compile Include="IInput.cs" />
+    <Compile Include="Interfaces\IAnimatable.cs" />
+    <Compile Include="Interfaces\IDestroyable.cs" />
+    <Compile Include="Interfaces\IInput.cs" />
     <Compile Include="LevelController.cs" />
-    <Compile Include="Player.cs" />
-    <Compile Include="PlayerController.cs" />
-    <Compile Include="PlayerMovement.cs" />
+    <Compile Include="PlayerScripts\Player.cs" />
+    <Compile Include="PlayerScripts\PlayerController.cs" />
+    <Compile Include="PlayerScripts\PlayerMovement.cs" />
     <Compile Include="Points.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -109,7 +109,7 @@
     <Compile Include="SongManager.cs" />
     <Compile Include="Time.cs" />
     <Compile Include="Transform.cs" />
-    <Compile Include="TriggerArrowAnimation.cs" />
+    <Compile Include="ArrowsScripts\TriggerArrowAnimation.cs" />
     <Compile Include="Vector2.cs" />
   </ItemGroup>
   <ItemGroup>

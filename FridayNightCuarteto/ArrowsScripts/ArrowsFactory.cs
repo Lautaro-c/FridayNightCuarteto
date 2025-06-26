@@ -14,7 +14,6 @@ namespace MyGame
         private const float upArrowPos = 828;
         private const float rightArrowPos = 928;
         private const float arrowsYPos = 768;
-        private const float staticArrowsYPos = 20;
 
         ArrowsPool arrowPool = new ArrowsPool();
         private List<(ArrowType arrowType, float spawnTime)> arrowQueue = new List<(ArrowType, float)>();
@@ -65,26 +64,5 @@ namespace MyGame
 
             }
         }
-
-        public static Arrows CreateArrows(ArrowType arrowType, float time)
-        {
-            switch (arrowType)
-            {
-                case ArrowType.leftArrowS:
-                    return new Arrows(leftArrowPos, staticArrowsYPos, true);
-                    break;
-                case ArrowType.rightArrowS:
-                    return new Arrows(rightArrowPos, staticArrowsYPos, true);
-                    break;
-                case ArrowType.upArrowS:
-                    return new Arrows(upArrowPos, staticArrowsYPos, true);
-                    break;
-                case ArrowType.downArrowS:
-                    return new Arrows(downArrowPos, staticArrowsYPos, true);
-                    break;
-            }
-            return null;
-        }
-
     }
 }
