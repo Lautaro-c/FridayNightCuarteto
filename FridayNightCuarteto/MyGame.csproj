@@ -272,6 +272,9 @@
     <Content Include="assets\RightArrowU.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="assets\songs\El Cuarteto de Nos - Invisible.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="assets\songs\Enamorado tuyo - El Cuarteto de Nos.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -11,7 +11,7 @@ namespace MyGame
     public class SongManager
     {
         AudioFileReader reader1 = new AudioFileReader("assets/songs/Enamorado tuyo - El Cuarteto de Nos.mp3");
-        AudioFileReader reader2 = new AudioFileReader("assets/songs/Enamorado tuyo - El Cuarteto de Nos.mp3");
+        AudioFileReader reader2 = new AudioFileReader("assets/songs/El Cuarteto de Nos - Invisible.mp3");
         WaveOutEvent outputDevice = new WaveOutEvent();
 
         public void startSong(int songNumber)
